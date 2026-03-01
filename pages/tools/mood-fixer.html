@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mood Fixer - Instant Motivation | Life Solver</title>
+    <meta name="description" content="Get instant motivation and positivity. AI-powered mood booster with personalized encouragement.">
+    <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/brand-components.css">
+    <link rel="stylesheet" href="../../css/mini-tool.css">
+    <link rel="stylesheet" href="../../css/notifications.css">
+</head>
+<body>
+    <nav class="ls-navbar">
+        <div class="ls-container">
+            <a href="../../index.html" class="ls-nav-logo">
+                <span>💡</span><span>Life Solver</span>
+            </a>
+            <div class="ls-nav-links">
+                <a href="../../index.html">Home</a>
+                <a href="../ai-tools.html">Tools</a>
+                <a href="../guides-library.html">Guides</a>
+                <a href="../life-hacks.html">Life Hacks</a>
+                <a href="../dashboard.html">Dashboard</a>
+            </div>
+            <button class="ls-mobile-menu" onclick="toggleMobileMenu()">☰</button>
+        </div>
+    </nav>
+
+    <div class="tool-container">
+        <div class="tool-header">
+            <span class="tool-icon">😊</span>
+            <h1>Mood Fixer</h1>
+            <p>Get instant motivation and positivity when you need it most</p>
+        </div>
+
+        <div class="tool-card">
+            <div class="form-group">
+                <label>How are you feeling right now?</label>
+                <div class="quick-options" style="justify-content: center; gap: 1rem;">
+                    <button class="quick-option" onclick="setMood('sad')" style="font-size: 2rem; padding: 1rem;">😢</button>
+                    <button class="quick-option" onclick="setMood('stressed')" style="font-size: 2rem; padding: 1rem;">😰</button>
+                    <button class="quick-option" onclick="setMood('anxious')" style="font-size: 2rem; padding: 1rem;">😟</button>
+                    <button class="quick-option" onclick="setMood('tired')" style="font-size: 2rem; padding: 1rem;">😴</button>
+                    <button class="quick-option" onclick="setMood('unmotivated')" style="font-size: 2rem; padding: 1rem;">😐</button>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Tell me more (optional)</label>
+                <textarea id="userInput" placeholder="What's bringing you down? (optional - helps personalize the response)"></textarea>
+            </div>
+
+            <button class="submit-btn" id="submitBtn" onclick="fixMood()">
+                <span id="btnText">✨ Boost My Mood</span>
+                <div class="spinner" id="spinner" style="display: none;"></div>
+            </button>
+
+            <div class="error-message" id="errorMsg"></div>
+        </div>
+
+        <div class="result-section" id="resultSection">
+            <div class="result-card" style="border-left-color: #48bb78;">
+                <div class="result-header">
+                    <h3>🌟 Your Mood Boost</h3>
+                    <div class="result-actions">
+                        <button class="action-btn" onclick="copyResult()">📋 Copy</button>
+                        <button class="action-btn" onclick="saveResult()">💾 Save</button>
+                        <button class="action-btn" onclick="fixMood()">🔄 New</button>
+                    </div>
+                </div>
+                <div class="result-content" id="resultContent"></div>
+            </div>
+        </div>
+
+        <div class="related-tools">
+            <h3>Related Tools</h3>
+            <div class="related-grid">
+                <a href="life-advisor.html" class="related-card">
+                    <span class="icon">🧭</span>
+                    <h4>Life Advisor</h4>
+                </a>
+                <a href="breakup-friend.html" class="related-card">
+                    <span class="icon">💙</span>
+                    <h4>Breakup Friend</h4>
+                </a>
+                <a href="productivity-boost.html" class="related-card">
+                    <span class="icon">⚡</span>
+                    <h4>Productivity Boost</h4>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../js/notifications.js"></script>
+    <script src="../../js/ai-tools-core.js"></script>
+    <script>
+        const TOOL_NAME = 'Mood Fixer';
+        let selectedMood = '';
+        const SYSTEM_PROMPT = `You are an uplifting, warm mood booster. Your job is to make people feel better instantly. Provide a motivational quote, followed by personalized encouragement. Be genuine, not cheesy. Use emojis sparingly but effectively. Keep it concise but impactful.`;
+
+        trackToolUsage(TOOL_NAME, window.location.href);
+        
+        // Show AI mode indicator
+        document.addEventListener('DOMContentLoaded', function() {
+            const mode = localStorage.getItem('ai_mode') || 'api';
+            const provider = localStorage.getItem('ai_provider') || 'gemini';
+            const hasCustomKey = localStorage.getItem('gemini_api_key') || localStorage.getItem('openai_api_key');
+            
+            const indicator = document.createElement('div');
+            indicator.style.cssText = `
+                position: fixed; top: 10px; right: 10px; z-index: 1000;
+                padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.8rem;
+                cursor: pointer; transition: all 0.3s ease;
+            `;
+            
+            if (mode === 'offline') {
+                indicator.style.background = '#48bb78';
+                indicator.style.color = 'white';
+                indicator.textContent = '🔄 Offline Mode';
+            } else if (hasCustomKey) {
+                indicator.style.background = '#ed8936';
+                indicator.style.color = 'white';
+                indicator.textContent = provider === 'gemini' ? '👑 Premium Gemini' : '👑 Premium OpenAI';
+            } else {
+                indicator.style.background = '#667eea';
+                indicator.style.color = 'white';
+                indicator.textContent = '🤖 Shared Gemini AI';
+            }
+            
+            indicator.onclick = () => window.open('../api-setup.html', '_blank');
+            indicator.title = 'Click to change AI settings';
+            document.body.appendChild(indicator);
+        });
+
+        function setMood(mood) {
+            selectedMood = mood;
+            document.querySelectorAll('.quick-option').forEach(btn => btn.classList.remove('selected'));
+            event.target.classList.add('selected');
+        }
+
+        async function fixMood() {
+            const extraContext = document.getElementById('userInput').value.trim();
+            let userMessage = selectedMood ? `I'm feeling ${selectedMood}.` : 'I need a mood boost.';
+            if (extraContext) userMessage += ` ${extraContext}`;
+
+            setLoading(true);
+            hideError();
+
+            try {
+                const response = await callAI(SYSTEM_PROMPT, userMessage);
+                showResult(response);
+            } catch (error) {
+                showError('Something went wrong. Please try again.');
+            } finally {
+                setLoading(false);
+            }
+        }
+
+        function showResult(text) {
+            document.getElementById('resultContent').textContent = text;
+            document.getElementById('resultSection').classList.add('show');
+            document.getElementById('resultSection').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function setLoading(loading) {
+            document.getElementById('submitBtn').disabled = loading;
+            document.getElementById('btnText').style.display = loading ? 'none' : 'inline';
+            document.getElementById('spinner').style.display = loading ? 'block' : 'none';
+        }
+
+        function showError(msg) {
+            const el = document.getElementById('errorMsg');
+            el.textContent = msg;
+            el.classList.add('show');
+        }
+
+        function hideError() {
+            document.getElementById('errorMsg').classList.remove('show');
+        }
+
+        function copyResult() {
+            copyToClipboard(document.getElementById('resultContent').textContent);
+        }
+
+        function saveResult() {
+            saveToHistory(TOOL_NAME, selectedMood || 'mood boost', document.getElementById('resultContent').textContent);
+        }
+    </script>
+</body>
+</html>

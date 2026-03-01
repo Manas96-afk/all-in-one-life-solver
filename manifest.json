@@ -1,0 +1,117 @@
+{
+    "name": "Life Solver - All-in-One Problem Solver",
+    "short_name": "Life Solver",
+    "description": "Find small AI tools, daily hacks, and mini guides to solve everyday life problems easily.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#f0f9ff",
+    "theme_color": "#0ea5e9",
+    "orientation": "portrait-primary",
+    "categories": ["productivity", "lifestyle", "education", "utilities"],
+    "lang": "en",
+    "dir": "ltr",
+    "icons": [
+        {
+            "src": "images/icon-72x72.png",
+            "sizes": "72x72",
+            "type": "image/png",
+            "purpose": "maskable any"
+        },
+        {
+            "src": "images/icon-96x96.png",
+            "sizes": "96x96",
+            "type": "image/png",
+            "purpose": "maskable any"
+        },
+        {
+            "src": "images/icon-128x128.png",
+            "sizes": "128x128",
+            "type": "image/png",
+            "purpose": "maskable any"
+        },
+        {
+            "src": "images/icon-144x144.png",
+            "sizes": "144x144",
+            "type": "image/png",
+            "purpose": "maskable any"
+        },
+        {
+            "src": "images/icon-152x152.png",
+            "sizes": "152x152",
+            "type": "image/png",
+            "purpose": "maskable any"
+        },
+        {
+            "src": "images/icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "maskable any"
+        },
+        {
+            "src": "images/icon-384x384.png",
+            "sizes": "384x384",
+            "type": "image/png",
+            "purpose": "maskable any"
+        },
+        {
+            "src": "images/icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable any"
+        }
+    ],
+    "screenshots": [
+        {
+            "src": "images/screenshot-desktop.png",
+            "sizes": "1280x720",
+            "type": "image/png",
+            "form_factor": "wide",
+            "label": "Life Solver Desktop View"
+        },
+        {
+            "src": "images/screenshot-mobile.png",
+            "sizes": "390x844",
+            "type": "image/png",
+            "form_factor": "narrow",
+            "label": "Life Solver Mobile View"
+        }
+    ],
+    "shortcuts": [
+        {
+            "name": "Browse Categories",
+            "short_name": "Categories",
+            "description": "Browse all tool categories",
+            "url": "/pages/category.html",
+            "icons": [
+                {
+                    "src": "images/shortcut-categories.png",
+                    "sizes": "96x96"
+                }
+            ]
+        },
+        {
+            "name": "AI Tools",
+            "short_name": "AI Tools",
+            "description": "Access AI-powered tools",
+            "url": "/pages/category.html?type=ai-tool",
+            "icons": [
+                {
+                    "src": "images/shortcut-ai.png",
+                    "sizes": "96x96"
+                }
+            ]
+        },
+        {
+            "name": "Life Hacks",
+            "short_name": "Hacks",
+            "description": "Quick life improvement tips",
+            "url": "/pages/category.html?type=life-hack",
+            "icons": [
+                {
+                    "src": "images/shortcut-hacks.png",
+                    "sizes": "96x96"
+                }
+            ]
+        }
+    ]
+}

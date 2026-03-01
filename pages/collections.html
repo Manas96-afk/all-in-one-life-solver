@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collections - Curated Tool Bundles | Quick AI Tools</title>
+    <meta name="description" content="Explore curated collections of AI tools, guides, and hacks bundled by theme - Student Survival Kit, Fitness Pack, Career Growth, and more">
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/collections.css">
+    <link rel="stylesheet" href="../css/notifications.css">
+    <link rel="stylesheet" href="../css/footer.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="../index.html" class="logo">Quick AI Tools</a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../pages/ai-tools.html">All Tools</a></li>
+                <li><a href="../pages/guides.html">Guides</a></li>
+                <li><a href="../pages/collections.html" class="active">Collections</a></li>
+                <li><a href="../pages/about.html">About</a></li>
+                <li><a href="../pages/contact.html">Contact</a></li>
+                <li><a href="../pages/dashboard.html">Dashboard</a></li>
+                <li><span class="notification-bell" onclick="openNotificationSettings()" title="Notification Settings">🔔</span></li>
+            </ul>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Collections Content -->
+    <main class="collections-main">
+        <div class="container">
+            <!-- Header -->
+            <div class="collections-header">
+                <h1>🎁 Curated Collections</h1>
+                <p class="subtitle">
+                    Discover perfectly bundled tools, guides, and hacks organized by theme. 
+                    Everything you need in one convenient pack!
+                </p>
+            </div>
+
+            <!-- Collections Grid -->
+            <div class="collections-grid" id="collectionsGrid">
+                <!-- Loading State -->
+                <div class="loading-state">
+                    <div class="loading-spinner"></div>
+                    <p>Loading collections...</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="ls-footer">
+        <div class="ls-container">
+            <div class="ls-footer-content">
+                <div class="ls-footer-brand">
+                    <a href="../index.html" class="ls-footer-logo">
+                        <span class="ls-footer-logo-icon">💡</span>
+                        <span>Life Solver</span>
+                    </a>
+                    <p class="ls-footer-tagline">
+                        Solve any life problem in minutes with simple AI tools, guides, and hacks.
+                    </p>
+                </div>
+                
+                <div class="ls-footer-section">
+                    <h3>Navigation</h3>
+                    <ul class="ls-footer-links">
+                        <li><a href="../index.html">🏠 Home</a></li>
+                        <li><a href="../pages/ai-tools.html">🔧 All Tools</a></li>
+                        <li><a href="../pages/collections.html">🎁 Collections</a></li>
+                        <li><a href="../pages/dashboard.html">📊 Dashboard</a></li>
+                    </ul>
+                </div>
+                
+                <div class="ls-footer-section">
+                    <h3>Support</h3>
+                    <ul class="ls-footer-links">
+                        <li><a href="../pages/about.html">ℹ️ About</a></li>
+                        <li><a href="../pages/contact.html">✉️ Contact</a></li>
+                        <li><a href="../pages/privacy.html">🔒 Privacy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="ls-footer-section ls-footer-social">
+                    <h3>Connect</h3>
+                    <div class="ls-social-icons">
+                        <a href="https://instagram.com" target="_blank" rel="noopener" class="ls-social-link instagram" aria-label="Instagram">📷</a>
+                        <a href="https://youtube.com" target="_blank" rel="noopener" class="ls-social-link youtube" aria-label="YouTube">▶️</a>
+                        <a href="https://t.me" target="_blank" rel="noopener" class="ls-social-link telegram" aria-label="Telegram">✈️</a>
+                        <a href="mailto:hello@lifesolver.com" class="ls-social-link email" aria-label="Email">✉️</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="ls-footer-bottom">
+                <p class="ls-footer-copyright">
+                    © 2024 <strong>Life Solver</strong> — Made with purpose, not pressure.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/collections.js"></script>
+    <script src="../js/notifications.js"></script>
+</body>
+</html>

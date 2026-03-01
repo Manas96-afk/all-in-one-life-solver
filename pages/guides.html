@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guides & Life Hacks | All-in-One Life Problem Solver</title>
+    <meta name="description" content="Quick guides for a better life. Easy solutions, practical tips, and short expert-style advice across every area of life.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/guides.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-lightbulb"></i>
+                <span>Life Solver</span>
+            </div>
+            <div class="nav-links">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="category.html" class="nav-link">Categories</a>
+                <a href="ai-tools.html" class="nav-link">AI Tools</a>
+                <a href="guides.html" class="nav-link active">Guides</a>
+            </div>
+            <button class="mobile-menu-btn" id="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <section class="header-section">
+        <div class="container">
+            <h1 class="header-title">Quick Guides for a Better Life</h1>
+            <p class="header-subtitle">Easy solutions, practical tips, and short expert-style advice across every area of life.</p>
+        </div>
+    </section>
+
+    <!-- Category Filters -->
+    <section class="category-filters-section">
+        <div class="container">
+            <div class="category-chips">
+                <button class="chip active" data-category="all">All</button>
+                <button class="chip" data-category="career">Career</button>
+                <button class="chip" data-category="study">Study</button>
+                <button class="chip" data-category="relationship">Relationship</button>
+                <button class="chip" data-category="fitness">Fitness</button>
+                <button class="chip" data-category="productivity">Productivity</button>
+                <button class="chip" data-category="mental-wellness">Mental Wellness</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guides Grid Section -->
+    <section class="guides-grid-section">
+        <div class="container">
+            <div class="guides-grid" id="guides-grid">
+                <!-- Career Guides -->
+                <div class="guide-card" data-category="career">
+                    <div class="guide-thumbnail">
+                        <div class="thumbnail-placeholder">💼</div>
+                    </div>
+                    <div class="guide-content">
+                        <span class="category-tag career-tag">Career</span>
+                        <h3 class="guide-title">How to Impress in Interviews</h3>
+                        <p class="guide-description">Master the art of making a great first impression and answering tough questions confidently.</p>
+                        <button class="read-btn">Read Guide</button>
+                    </div>
+                </div>
+
+                <div class="guide-card" data-category="career">
+                    <div class="guide-thumbnail">
+                        <div class="thumbnail-placeholder">🎯</div>
+                    </div>
+                    <div class="guide-content">
+                        <span class="category-tag career-tag">Career</span>
+                        <h3 class="guide-title">How to Choose the Right Career Path</h3>
+                        <p class="guide-description">Discover your strengths and find a career that matches your passion and skills.</p>
+                        <button class="read-btn">Read Guide</button>
+                    </div>
+                </div>
+
+                <div class="guide-card" data-category="career">
+                    <div class="guide-thumbnail">
+                        <div class="thumbnail-placeholder">📝</div>
+                    </div>
+                    <div class="guide-content">
+                        <span class="category-tag career-tag">Career</span>
+                        <h3 class="guide-title">How to Write a Perfect Resume</h3>
+                        <p class="guide-description">Create a resume that stands out and gets you noticed by recruiters.</p>
+                        <button class="read-btn">Read Guide</button>
+                    </div>
+                </div>
+
+                <!-- Study Guides -->
+                <div class="guide-card" data-category="study">
+                    <div class="guide-thumbnail">
+                        <div class="thumbnail-placeholder">📚</div>
+                    </div>
+                    <div class="guide-content">
+                        <span class="category-tag study-tag">Study</span>
+                        <h3 class="guide-title">How to Study Smarter in 20 Minutes</h3>
+                        <p class="guide-description">Learn proven techniques to maximize your study efficiency and retain more information.</p>
+                        <button class="read-btn">Read Guide</button>
+                    </div>
+                </div>
+
+                <div class="guide-card" data-category="study">
+                    <div class="guide-thumbnail">
+                        <div class="thumbnail-placeholder">📖</div>
+                    </div>
+                    <div class="guide-content">
+                        <span class="category-tag study-tag">Study</span>
+                        <h3 class="guide-title">How to Take Notes Like a Top Student</h3>
+                        <p class="guide-description">Master note-taking methods that help you understand and remember better.</p>
+                        <button class="read-btn">Read Guide</button>
+                    </div>
+                </div>
+
+                <div class="guide-card" data-category="study">
+                    <div class="guide-thumbnail">
+                        <div class="thumbnail-placeholder">🎯</div>
+                    </div>
+                    <div class="guide-content">
+                        <span class="category-tag study-tag">Study</span>
+                        <h3 class="guide-title">How to Boost Focus Without Motivation</h3>
+                        <p class="guide-description">Simple tricks to concentrate even when you don't feel like studying.</p>
+                        <button class="read-btn">Read Guide</button>
+                    </div>
+                </div>
+
+                <!-- Relationship Guides -->
+                <div class="guide-card" data-category="relationship">
+                    <div class="guide-thumbnail">
+                        <div class="thumbnail-placeholder">💬</div>
+                    </div>
+                    <div class="guide-content">
+                        <span class="category-tag relationship-tag">Relationship</span>
+                        <h3 class="guide-title">How to Text Someone You Like</h3>
+                        <p class="guide-description">Start conversations naturally and keep them interesting without overthinking.</p>
+                        <button class="read-btn">Read Guide</button>
+                    </div>
+                </div>
+
+                <div class="guide-card" data-category="relationship">
+                    <div class="guide-thumbnail">
+                        <div class="thumbnail-placeholder">🤝</div>
+                    </div>
+                    <div class="guide-content">
+                        <span class="category-tag relationship-tag">Relationship</span>
+                        <h3 class="guide-title">How to Solve Misunderstandings Calmly</h3>
+                        <p class="guide-description">Handle conflicts peacefully and strengthen your relationships.</p>
+                        <button class="read-btn">Read Guide</button>
+                    </div>
+                </div>
+
+                <div class="guide-card" data-category="relationship">
+                    <div class="guide-thumbnail">
+                        <div class="thumbnail-placeholder">❤️</div>
+                    </div>
+                    <div class="guide-content">
+                        <span class="category-tag relationship-tag">Relationship</span>
+                        <h3 class="guide-title">How to Build Healthy Communication</h3>
+                        <p class="guide-description">Express yourself clearly and listen actively to create deeper connections.</p>
+                        <button class="read-btn">Read Guide</button>
+                    </div>
+                </div>
+
+                <!-- Fitness Guides -->
+                <div class="guide-card" data-category="fitness">
+                    <div class="guide-thumbnail">
+                        <div class="thumbnail-placeholder">💪</div>
+                    </div>
+                    <div class="guide-content">
+                        <span class="category-tag fitness-tag">Fitness</span>
+                        <h3 class="guide-title">How to Start Working Out as a Beginner</h3>
+                        <p class="guide-description">Simple steps to begin your fitness journey without feeling overwhelmed.</p>
+                        <button class="read-btn">Read Guide</button>
+                    </div>
+                </div>
+
+                <div class="guide-card" data-category="fitness">
+                    <div class="guide-thumbnail">
+                        <div class="thumbnail-placeholder">🥗</div>
+                    </div>
+                    <div class="guide-content">
+                        <span class="category-tag fitness-tag">Fitness</span>
+                        <h3 class="guide-title">How to Make a Diet You Can Actually Follow</h3>
+                        <p class="guide-description">Create sustainable eating habits that fit your lifestyle and goals.</p>
+                        <button class="read-btn">Read Guide</button>
+                    </div>
+                </div>
+
+                <div class="guide-card" data-category="fitness">
+                    <div class="guide-thumbnail">
+                        <div class="thumbnail-placeholder">😴</div>
+                    </div>
+                    <div class="guide-content">
+                        <span class="category-tag fitness-tag">Fitness</span>
+                        <h3 class="guide-title">How to Fix Your Sleep Cycle Naturally</h3>
+                        <p class="guide-description">Reset your sleep schedule and wake up feeling refreshed every day.</p>
+                        <button class="read-btn">Read Guide</button>
+                    </div>
+                </div>
+
+                <!-- Productivity Guides -->
+                <div class="guide-card" data-category="productivity">
+                    <div class="guide-thumbnail">
+                        <div class="thumbnail-placeholder">⚡</div>
+                    </div>
+                    <div class="guide-content">
+                        <span class="category-tag productivity-tag">Productivity</span>
+                        <h3 class="guide-title">How to Stop Procrastination in 2 Minutes</h3>
+                        <p class="guide-description">Quick mental tricks to overcome procrastination and start taking action.</p>
+                        <button class="read-btn">Read Guide</button>
+                    </div>
+                </div>
+
+                <div class="guide-card" data-category="productivity">
+                    <div class="guide-thumbnail">
+                        <div class="thumbnail-placeholder">📅</div>
+                    </div>
+                    <div class="guide-content">
+                        <span class="category-tag productivity-tag">Productivity</span>
+                        <h3 class="guide-title">How to Plan Your Day Efficiently</h3>
+                        <p class="guide-description">Organize your tasks and time to get more done with less stress.</p>
+                        <button class="read-btn">Read Guide</button>
+                    </div>
+                </div>
+
+                <div class="guide-card" data-category="productivity">
+                    <div class="guide-thumbnail">
+                        <div class="thumbnail-placeholder">🌅</div>
+                    </div>
+                    <div class="guide-content">
+                        <span class="category-tag productivity-tag">Productivity</span>
+                        <h3 class="guide-title">How to Build a Morning Routine That Works</h3>
+                        <p class="guide-description">Start your day with energy, focus, and a positive mindset.</p>
+                        <button class="read-btn">Read Guide</button>
+                    </div>
+                </div>
+
+                <!-- Mental Wellness Guides -->
+                <div class="guide-card" data-category="mental-wellness">
+                    <div class="guide-thumbnail">
+                        <div class="thumbnail-placeholder">🧠</div>
+                    </div>
+                    <div class="guide-content">
+                        <span class="category-tag wellness-tag">Mental Wellness</span>
+                        <h3 class="guide-title">How to Reduce Overthinking Daily</h3>
+                        <p class="guide-description">Calm your mind and stop worrying about things you can't control.</p>
+                        <button class="read-btn">Read Guide</button>
+                    </div>
+                </div>
+
+                <div class="guide-card" data-category="mental-wellness">
+                    <div class="guide-thumbnail">
+                        <div class="thumbnail-placeholder">💎</div>
+                    </div>
+                    <div class="guide-content">
+                        <span class="category-tag wellness-tag">Mental Wellness</span>
+                        <h3 class="guide-title">How to Build Confidence Slowly</h3>
+                        <p class="guide-description">Small daily actions that gradually boost your self-confidence.</p>
+                        <button class="read-btn">Read Guide</button>
+                    </div>
+                </div>
+
+                <div class="guide-card" data-category="mental-wellness">
+                    <div class="guide-thumbnail">
+                        <div class="thumbnail-placeholder">🧘</div>
+                    </div>
+                    <div class="guide-content">
+                        <span class="category-tag wellness-tag">Mental Wellness</span>
+                        <h3 class="guide-title">How to Manage Stress Without Running Away</h3>
+                        <p class="guide-description">Face challenges calmly and develop healthy coping mechanisms.</p>
+                        <button class="read-btn">Read Guide</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Load More Button -->
+            <div class="load-more-section">
+                <button class="load-more-btn" id="load-more-btn">
+                    <span>Load More Guides</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-box">
+                <h2>Get New Guides Every Week</h2>
+                <p>Subscribe to receive the latest life hacks and practical tips directly in your inbox.</p>
+                <form class="newsletter-form" id="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+                <div class="success-message" id="success-message">
+                    ✅ Thank you for subscribing! Check your inbox soon.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="about-new.html">About</a>
+                    <a href="request.html">Contact</a>
+                    <a href="#">Privacy</a>
+                    <a href="#">Terms</a>
+                </div>
+                <div class="footer-social">
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <p class="footer-copyright">© 2025 Life Solver. Made with ❤️ to make your life easier.</p>
+        </div>
+    </footer>
+
+    <script src="../js/guides.js"></script>
+</body>
+</html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>Request a Tool or Guide | Life Solver</title>
+    <meta name="title" content="Request a Tool or Guide | Life Solver">
+    <meta name="description" content="Got an idea or facing a life challenge? Request a custom AI tool, life hack, or guide. We'll create it for you!">
+    <meta name="keywords" content="request tool, custom guide, life hack request, AI tool request, personal assistance">
+    <meta name="author" content="Life Solver">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://lifesolver.com/request">
+    <meta property="og:title" content="Request a Tool or Guide | Life Solver">
+    <meta property="og:description" content="Got an idea or facing a life challenge? Request a custom AI tool, life hack, or guide. We'll create it for you!">
+    <meta property="og:image" content="https://lifesolver.com/images/request-og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://lifesolver.com/request">
+    <meta property="twitter:title" content="Request a Tool or Guide | Life Solver">
+    <meta property="twitter:description" content="Got an idea or facing a life challenge? Request a custom AI tool, life hack, or guide.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+    
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#87CEEB">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://lifesolver.com/request">
+    
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">Life Solver</span>
+                <span class="logo-icon">💡</span>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="category.html" class="nav-link">Categories</a>
+                <a href="#" class="nav-link">AI Tools</a>
+                <a href="#" class="nav-link">About</a>
+            </div>
+            
+            <div class="nav-actions">
+                <button class="search-btn" id="search-btn">
+                    <i class="fas fa-search"></i>
+                </button>
+                <button class="mobile-menu-btn" id="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Request Page Content -->
+    <section class="request-page">
+        <div class="container">
+            <!-- Header Section -->
+            <div class="request-header">
+                <div class="floating-emojis">
+                    <span class="emoji emoji-1">💡</span>
+                    <span class="emoji emoji-2">✨</span>
+                    <span class="emoji emoji-3">🤔</span>
+                    <span class="emoji emoji-4">💫</span>
+                </div>
+                
+                <h1 class="request-title">Request a Tool or Guide 📝</h1>
+                <p class="request-subtitle">
+                    Got an idea or facing a life challenge? Tell us — we'll make a tool or guide for it!
+                </p>
+                
+                <div class="solvee-message">
+                    <div class="solvee-avatar">🤖</div>
+                    <div class="solvee-text">
+                        <p>"Tell me what you need, I'll make it happen 💪"</p>
+                        <span>- Solvee</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Request Form -->
+            <div class="request-form-container" id="request-form-container">
+                <form class="request-form" id="request-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="category">What type of solution?</label>
+                            <select id="category" name="category" required>
+                                <option value="">Choose a category</option>
+                                <option value="AI Tool">🤖 AI Tool</option>
+                                <option value="Life Hack">💡 Life Hack</option>
+                                <option value="Short Guide">📘 Short Guide</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="priority">Priority Level</label>
+                            <select id="priority" name="priority" required>
+                                <option value="">Select priority</option>
+                                <option value="Normal">📅 Normal</option>
+                                <option value="Urgent">🚨 Urgent</option>
+                                <option value="Future Idea">💭 Future Idea</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="topic">Topic or Problem</label>
+                        <input type="text" id="topic" name="topic" placeholder="What's your idea or problem?" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="description">Detailed Description</label>
+                        <textarea id="description" name="description" rows="4" placeholder="Tell us more about what you need help with..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        <span>Send Request</span>
+                        <span class="btn-icon">🚀</span>
+                    </button>
+                </form>
+            </div>
+
+            <!-- Success Message -->
+            <div class="success-message" id="success-message" style="display: none;">
+                <div class="success-icon">✅</div>
+                <h3>Thank you! Your idea has been received.</h3>
+                <p>Solvee will review it soon 💬</p>
+                <button class="new-request-btn" id="new-request-btn">
+                    Submit Another Request
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-text">
+                    © 2025 All-in-One Life Problem Solver. Made with ❤️ to make your life easier.
+                </p>
+                <div class="footer-actions">
+                    <a href="../index.html" class="back-home-btn">
+                        <i class="fas fa-home"></i>
+                        Back to Home
+                    </a>
+                    <a href="dashboard.html" class="back-home-btn" style="margin-left: 1rem;">
+                        <i class="fas fa-chart-bar"></i>
+                        Admin Dashboard
+                    </a>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Solvee Chat Widget -->
+    <div class="chat-widget" id="chat-widget">
+        <!-- Chat Button -->
+        <div class="chat-button" id="chat-button">
+            <span class="chat-icon">💬</span>
+            <div class="chat-pulse"></div>
+        </div>
+
+        <!-- Chat Window -->
+        <div class="chat-window" id="chat-window">
+            <div class="chat-header">
+                <div class="chat-title">
+                    <span class="solvee-avatar">🤖</span>
+                    <div class="title-text">
+                        <h4>Solvee – Your Life Helper</h4>
+                        <span class="status">🤍 Always here to help</span>
+                    </div>
+                </div>
+                <button class="chat-close" id="chat-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <div class="chat-messages" id="chat-messages">
+                <div class="message solvee-message">
+                    <div class="message-avatar">🤖</div>
+                    <div class="message-content">
+                        <p>Hi there! I'm Solvee, your friendly life helper. Ask me about study tips, relationships, fitness, career advice, or anything else! 💫</p>
+                        <span class="message-time">Just now</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="typing-indicator" id="typing-indicator" style="display: none;">
+                <div class="typing-avatar">🤖</div>
+                <div class="typing-content">
+                    <div class="typing-dots">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <span class="typing-text">Solvee is thinking...</span>
+                </div>
+            </div>
+
+            <div class="chat-input-area">
+                <div class="chat-input-container">
+                    <input type="text" id="chat-input" placeholder="Ask me anything..." maxlength="200">
+                    <button class="send-button" id="send-button">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frequently Asked Questions - Life Problem Solver</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/homepage.css">
+    <style>
+        .page-header {
+            padding: 120px 20px 60px;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            text-align: center;
+        }
+
+        .page-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+
+        .page-content {
+            padding: 60px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: white;
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .faq-question {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .faq-answer {
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-lightbulb"></i>
+                <span>Life Solver</span>
+            </div>
+            <div class="nav-links">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="category.html" class="nav-link">Categories</a>
+            </div>
+            <button class="mobile-menu-btn" onclick="window.location.href='../index.html'">
+                <i class="fas fa-arrow-left"></i>
+            </button>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <h1 class="page-title">Frequently Asked Questions</h1>
+            <p>Answers to common questions about Life Problem Solver.</p>
+        </div>
+    </header>
+
+    <main class="page-content">
+        <div class="faq-item">
+            <h3 class="faq-question">Are the AI tools free to use?</h3>
+            <p class="faq-answer">The platform includes a demo mode that works out-of-the-box. If you want more powerful
+                or longer responses, you can configure your own free or paid API keys in the Settings.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3 class="faq-question">Does Life Solver store my conversations?</h3>
+            <p class="faq-answer">Your recent conversations are only stored locally on your device in your browser's
+                local storage so you can look at them later. We do not store them on any centralized databases.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3 class="faq-question">How do I add my own OpenAI/Gemini API key?</h3>
+            <p class="faq-answer">Navigate to any tool like the "Life Advisor", click the "Demo Mode" or gear icon
+                button in the header, and paste your API key in the configuration settings. Your key is stored locally
+                on your computer.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3 class="faq-question">Is my information private?</h3>
+            <p class="faq-answer">Yes, because we do not have a centralized database, all of your tool history and
+                favorites are completely private to your device.</p>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-copyright">
+                © 2024 Life Solver
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

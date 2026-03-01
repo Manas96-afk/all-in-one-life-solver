@@ -1,0 +1,142 @@
+{
+  "collections": [
+    {
+      "id": "student-survival",
+      "name": "Student Survival Kit",
+      "description": "Everything you need to ace your studies and stay organized",
+      "icon": "🎓",
+      "gradient": "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+      "items": {
+        "tools": [
+          { "name": "Study Planner Tool", "description": "Plan your study schedule efficiently", "link": "#" },
+          { "name": "Note Summarizer", "description": "Summarize long notes instantly", "link": "#" },
+          { "name": "Quiz Generator", "description": "Create practice quizzes from your notes", "link": "#" }
+        ],
+        "guides": [
+          { "name": "Focus Guide", "description": "Master deep focus techniques", "link": "#" },
+          { "name": "Time Management 101", "description": "Manage your time like a pro", "link": "#" }
+        ],
+        "hacks": [
+          { "name": "Study Hacks", "description": "Proven techniques to study smarter", "link": "#" },
+          { "name": "Memory Tricks", "description": "Remember more with less effort", "link": "#" },
+          { "name": "Stress-Relief Tips", "description": "Stay calm during exam season", "link": "#" }
+        ]
+      }
+    },
+    {
+      "id": "fitness-starter",
+      "name": "Fitness Starter Pack",
+      "description": "Begin your fitness journey with the right tools and guidance",
+      "icon": "💪",
+      "gradient": "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)",
+      "items": {
+        "tools": [
+          { "name": "Workout Suggestor", "description": "Get personalized workout plans", "link": "#" },
+          { "name": "Calorie Calculator", "description": "Track your daily calorie intake", "link": "#" },
+          { "name": "Progress Tracker", "description": "Monitor your fitness progress", "link": "#" }
+        ],
+        "guides": [
+          { "name": "Daily Fitness Guide", "description": "Build healthy daily habits", "link": "#" },
+          { "name": "Nutrition Basics", "description": "Learn what to eat for your goals", "link": "#" }
+        ],
+        "hacks": [
+          { "name": "Home Workout Hacks", "description": "No gym? No problem!", "link": "#" },
+          { "name": "Quick 10-Min Routines", "description": "Effective workouts in minutes", "link": "#" },
+          { "name": "Motivation Boosters", "description": "Stay motivated every day", "link": "#" }
+        ]
+      }
+    },
+    {
+      "id": "career-growth",
+      "name": "Career Growth Pack",
+      "description": "Accelerate your professional development and land your dream job",
+      "icon": "🚀",
+      "gradient": "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)",
+      "items": {
+        "tools": [
+          { "name": "Mini Career Coach", "description": "Get AI-powered career advice", "link": "#" },
+          { "name": "Resume Builder", "description": "Create professional resumes", "link": "#" },
+          { "name": "Interview Prep", "description": "Practice common interview questions", "link": "#" }
+        ],
+        "guides": [
+          { "name": "Resume Tips Guide", "description": "Write resumes that get noticed", "link": "#" },
+          { "name": "LinkedIn Optimization", "description": "Build a powerful LinkedIn profile", "link": "#" }
+        ],
+        "hacks": [
+          { "name": "Productivity Hacks", "description": "Work smarter, not harder", "link": "#" },
+          { "name": "Networking Tips", "description": "Build meaningful connections", "link": "#" },
+          { "name": "Salary Negotiation", "description": "Get paid what you're worth", "link": "#" }
+        ]
+      }
+    },
+    {
+      "id": "mental-wellness",
+      "name": "Mental Wellness Pack",
+      "description": "Tools and resources for better mental health and emotional balance",
+      "icon": "🧘",
+      "gradient": "linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)",
+      "items": {
+        "tools": [
+          { "name": "Mood Fixer", "description": "Improve your mood instantly", "link": "#" },
+          { "name": "Meditation Timer", "description": "Guided meditation sessions", "link": "#" },
+          { "name": "Gratitude Journal", "description": "Practice daily gratitude", "link": "#" }
+        ],
+        "guides": [
+          { "name": "Emotional Health Guide", "description": "Understand and manage emotions", "link": "#" },
+          { "name": "Mindfulness Basics", "description": "Live in the present moment", "link": "#" }
+        ],
+        "hacks": [
+          { "name": "Daily Positivity Hacks", "description": "Start each day with positivity", "link": "#" },
+          { "name": "Stress Management", "description": "Reduce stress naturally", "link": "#" },
+          { "name": "Better Sleep Tips", "description": "Sleep better, feel better", "link": "#" }
+        ]
+      }
+    },
+    {
+      "id": "creative-boost",
+      "name": "Creative Boost Pack",
+      "description": "Unleash your creativity with powerful tools and inspiration",
+      "icon": "🎨",
+      "gradient": "linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%)",
+      "items": {
+        "tools": [
+          { "name": "Idea Generator", "description": "Never run out of creative ideas", "link": "#" },
+          { "name": "Color Palette Maker", "description": "Create beautiful color schemes", "link": "#" },
+          { "name": "Story Starter", "description": "Kickstart your writing projects", "link": "#" }
+        ],
+        "guides": [
+          { "name": "Creative Process Guide", "description": "Develop your creative workflow", "link": "#" },
+          { "name": "Design Principles", "description": "Learn fundamental design rules", "link": "#" }
+        ],
+        "hacks": [
+          { "name": "Beat Creative Block", "description": "Overcome creative obstacles", "link": "#" },
+          { "name": "Daily Inspiration", "description": "Find inspiration everywhere", "link": "#" },
+          { "name": "Quick Sketching Tips", "description": "Improve your visual thinking", "link": "#" }
+        ]
+      }
+    },
+    {
+      "id": "entrepreneur-essentials",
+      "name": "Entrepreneur Essentials",
+      "description": "Everything you need to start and grow your business",
+      "icon": "💼",
+      "gradient": "linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%)",
+      "items": {
+        "tools": [
+          { "name": "Business Name Generator", "description": "Find the perfect business name", "link": "#" },
+          { "name": "Pitch Deck Creator", "description": "Create compelling presentations", "link": "#" },
+          { "name": "Market Research Tool", "description": "Analyze your target market", "link": "#" }
+        ],
+        "guides": [
+          { "name": "Startup Guide", "description": "Launch your business successfully", "link": "#" },
+          { "name": "Marketing Basics", "description": "Market your business effectively", "link": "#" }
+        ],
+        "hacks": [
+          { "name": "Growth Hacks", "description": "Scale your business faster", "link": "#" },
+          { "name": "Time-Saving Tools", "description": "Automate repetitive tasks", "link": "#" },
+          { "name": "Customer Retention", "description": "Keep customers coming back", "link": "#" }
+        ]
+      }
+    }
+  ]
+}

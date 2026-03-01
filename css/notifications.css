@@ -1,0 +1,459 @@
+/* Notification System Styles */
+
+/* In-App Notification */
+.in-app-notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    max-width: 400px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    padding: 1.5rem;
+    z-index: 10000;
+    transform: translateX(450px);
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    gap: 1rem;
+}
+
+.in-app-notification.show {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.in-app-notification.info {
+    border-left: 4px solid #667eea;
+}
+
+.in-app-notification.success {
+    border-left: 4px solid #48bb78;
+}
+
+.in-app-notification.welcome {
+    border-left: 4px solid #ed8936;
+    max-width: 450px;
+}
+
+.in-app-notification.reminder {
+    border-left: 4px solid #9f7aea;
+    background: linear-gradient(135deg, #faf5ff 0%, #ffffff 100%);
+}
+
+.notification-content {
+    flex: 1;
+}
+
+.notification-close {
+    background: none;
+    border: none;
+    font-size: 1.25rem;
+    color: #a0aec0;
+    cursor: pointer;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.notification-close:hover {
+    background: #edf2f7;
+    color: #4a5568;
+}
+
+/* Welcome Notification */
+.welcome-notification h3 {
+    font-size: 1.25rem;
+    color: #2d3748;
+    margin-bottom: 1rem;
+}
+
+.notification-section {
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+    background: #f7fafc;
+    border-radius: 8px;
+}
+
+.notification-section:last-child {
+    margin-bottom: 0;
+}
+
+.notification-section strong {
+    color: #4a5568;
+    display: block;
+    margin-bottom: 0.25rem;
+    font-size: 0.9rem;
+}
+
+.notification-section p {
+    color: #718096;
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.btn-notification-settings {
+    width: 100%;
+    padding: 0.75rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 0.5rem;
+}
+
+.btn-notification-settings:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+/* Notification Modal */
+.notification-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10001;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    padding: 1rem;
+}
+
+.notification-modal.show {
+    opacity: 1;
+}
+
+.notification-modal-content {
+    background: white;
+    border-radius: 20px;
+    max-width: 500px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    animation: modalSlideUp 0.4s ease;
+}
+
+@keyframes modalSlideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.modal-header {
+    padding: 1.5rem 2rem;
+    border-bottom: 1px solid #e2e8f0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.modal-header h2 {
+    font-size: 1.5rem;
+    color: #2d3748;
+    margin: 0;
+}
+
+.modal-close {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #a0aec0;
+    cursor: pointer;
+    padding: 0;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.modal-close:hover {
+    background: #edf2f7;
+    color: #4a5568;
+}
+
+.modal-body {
+    padding: 2rem;
+}
+
+/* Permission Status */
+.permission-status {
+    padding: 1rem;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    border: 2px solid #e2e8f0;
+}
+
+.permission-status.granted {
+    background: #f0fff4;
+    border-color: #48bb78;
+}
+
+.permission-status.denied {
+    background: #fff5f5;
+    border-color: #fc8181;
+}
+
+.permission-status.default {
+    background: #fffaf0;
+    border-color: #ed8936;
+}
+
+.permission-status p {
+    margin: 0 0 0.5rem 0;
+    color: #2d3748;
+}
+
+.permission-status .help-text {
+    font-size: 0.875rem;
+    color: #718096;
+    margin: 0.5rem 0 0 0;
+}
+
+.btn-enable-notifications {
+    padding: 0.625rem 1.25rem;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-enable-notifications:hover {
+    background: #5568d3;
+}
+
+/* Reminder Settings */
+.reminder-settings {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.reminder-item {
+    background: #f7fafc;
+    padding: 1.25rem;
+    border-radius: 12px;
+    border: 2px solid #e2e8f0;
+    transition: all 0.3s ease;
+}
+
+.reminder-item:hover {
+    border-color: #cbd5e0;
+}
+
+.reminder-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.reminder-icon {
+    font-size: 1.5rem;
+}
+
+.reminder-name {
+    flex: 1;
+    font-weight: 600;
+    color: #2d3748;
+}
+
+/* Toggle Switch */
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 26px;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #cbd5e0;
+    transition: 0.3s;
+    border-radius: 26px;
+}
+
+.toggle-slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.3s;
+    border-radius: 50%;
+}
+
+.toggle-switch input:checked + .toggle-slider {
+    background-color: #667eea;
+}
+
+.toggle-switch input:checked + .toggle-slider:before {
+    transform: translateX(24px);
+}
+
+/* Reminder Time */
+.reminder-time {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.time-input {
+    flex: 1;
+    padding: 0.625rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #2d3748;
+    transition: all 0.3s ease;
+}
+
+.time-input:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+.btn-remove {
+    padding: 0.625rem;
+    background: #fc8181;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.btn-remove:hover {
+    background: #f56565;
+}
+
+/* Notification Bell Icon (for navbar) */
+.notification-bell {
+    position: relative;
+    cursor: pointer;
+    font-size: 1.25rem;
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.notification-bell:hover {
+    background: rgba(102, 126, 234, 0.1);
+}
+
+.notification-bell.has-notifications::after {
+    content: '';
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 8px;
+    height: 8px;
+    background: #fc8181;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .in-app-notification {
+        top: 10px;
+        right: 10px;
+        left: 10px;
+        max-width: none;
+    }
+
+    .notification-modal-content {
+        max-width: 100%;
+        border-radius: 20px 20px 0 0;
+        max-height: 95vh;
+    }
+
+    .modal-header {
+        padding: 1.25rem 1.5rem;
+    }
+
+    .modal-body {
+        padding: 1.5rem;
+    }
+
+    .reminder-item {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .in-app-notification {
+        padding: 1.25rem;
+    }
+
+    .welcome-notification h3 {
+        font-size: 1.1rem;
+    }
+
+    .notification-section {
+        padding: 0.625rem;
+    }
+
+    .modal-header h2 {
+        font-size: 1.25rem;
+    }
+
+    .reminder-header {
+        flex-wrap: wrap;
+    }
+
+    .reminder-name {
+        flex-basis: 100%;
+        margin-bottom: 0.5rem;
+    }
+}
+
+/* Animation for notification bell */
+@keyframes bellRing {
+    0%, 100% { transform: rotate(0deg); }
+    10%, 30% { transform: rotate(-10deg); }
+    20%, 40% { transform: rotate(10deg); }
+}
+
+.notification-bell.ringing {
+    animation: bellRing 0.5s ease;
+}

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guides Library - Learn Something New | Life Solver</title>
+    <meta name="description" content="20+ comprehensive guides on productivity, study, career, fitness, mental health, and more. Learn something new in minutes.">
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/brand-components.css">
+    <link rel="stylesheet" href="../css/guides-library.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/notifications.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="ls-navbar">
+        <div class="ls-container">
+            <a href="../index.html" class="ls-nav-logo">
+                <span class="logo-icon">💡</span>
+                <span>Life Solver</span>
+            </a>
+            <div class="ls-nav-links">
+                <a href="../index.html">Home</a>
+                <a href="ai-tools.html">Tools</a>
+                <a href="guides-library.html" class="active">Guides</a>
+                <a href="life-hacks.html">Life Hacks</a>
+                <a href="collections.html">Collections</a>
+                <a href="dashboard.html">Dashboard</a>
+                <span class="notification-bell" onclick="openNotificationSettings()">🔔</span>
+            </div>
+            <button class="ls-mobile-menu" onclick="toggleMobileMenu()">☰</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="guides-hero">
+        <div class="ls-container">
+            <h1>📚 Guides Library</h1>
+            <p class="hero-subtitle">Learn something new in minutes. Comprehensive guides on productivity, study, career, fitness, and more.</p>
+            
+            <!-- Search -->
+            <div class="guides-search">
+                <span class="search-icon">🔍</span>
+                <input type="text" id="guideSearch" placeholder="Search guides..." onkeyup="filterGuides()">
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Guides -->
+    <section class="featured-section">
+        <div class="ls-container">
+            <div class="section-header">
+                <h2>⭐ Featured Guides</h2>
+                <a href="#all-guides" class="view-all-link">View All →</a>
+            </div>
+            <div class="featured-grid" id="featuredGrid">
+                <!-- Featured guides loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Category Filter -->
+    <section class="category-filter" id="all-guides">
+        <div class="ls-container">
+            <div class="filter-tabs" id="categoryTabs">
+                <button class="filter-tab active" data-category="all" onclick="filterByCategory('all')">
+                    📚 All Guides
+                </button>
+                <!-- Categories loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Guides Grid -->
+    <main class="guides-main">
+        <div class="ls-container">
+            <!-- Stats Bar -->
+            <div class="guides-stats">
+                <span id="guideCount">20 guides</span>
+            </div>
+
+            <!-- Guides Grid -->
+            <div class="guides-grid" id="guidesGrid">
+                <!-- Guides loaded dynamically -->
+                <div class="loading-state">
+                    <div class="ls-spinner"></div>
+                    <p>Loading guides...</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="ls-footer">
+        <div class="ls-container">
+            <div class="ls-footer-content">
+                <div class="ls-footer-brand">
+                    <a href="../index.html" class="ls-footer-logo">
+                        <span class="ls-footer-logo-icon">💡</span>
+                        <span>Life Solver</span>
+                    </a>
+                    <p class="ls-footer-tagline">
+                        Solve any life problem in minutes with simple AI tools, guides, and hacks.
+                    </p>
+                </div>
+                <div class="ls-footer-section">
+                    <h3>Navigation</h3>
+                    <ul class="ls-footer-links">
+                        <li><a href="../index.html">🏠 Home</a></li>
+                        <li><a href="ai-tools.html">🔧 All Tools</a></li>
+                        <li><a href="collections.html">🎁 Collections</a></li>
+                        <li><a href="dashboard.html">📊 Dashboard</a></li>
+                    </ul>
+                </div>
+                <div class="ls-footer-section">
+                    <h3>Support</h3>
+                    <ul class="ls-footer-links">
+                        <li><a href="about.html">ℹ️ About</a></li>
+                        <li><a href="contact.html">✉️ Contact</a></li>
+                        <li><a href="privacy.html">🔒 Privacy</a></li>
+                    </ul>
+                </div>
+                <div class="ls-footer-section ls-footer-social">
+                    <h3>Connect</h3>
+                    <div class="ls-social-icons">
+                        <a href="#" class="ls-social-link instagram">📷</a>
+                        <a href="#" class="ls-social-link youtube">▶️</a>
+                        <a href="#" class="ls-social-link telegram">✈️</a>
+                        <a href="#" class="ls-social-link email">✉️</a>
+                    </div>
+                </div>
+            </div>
+            <div class="ls-footer-bottom">
+                <p class="ls-footer-copyright">
+                    © 2024 <strong>Life Solver</strong> — Made with purpose, not pressure.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/notifications.js"></script>
+    <script src="../js/guides-library.js"></script>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout Suggestor - Home Workout Ideas | Life Solver</title>
+    <meta name="description" content="Get personalized home workout suggestions. No equipment needed, just motivation.">
+    <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/brand-components.css">
+    <link rel="stylesheet" href="../../css/mini-tool.css">
+    <link rel="stylesheet" href="../../css/notifications.css">
+</head>
+<body>
+    <nav class="ls-navbar">
+        <div class="ls-container">
+            <a href="../../index.html" class="ls-nav-logo"><span>💡</span><span>Life Solver</span></a>
+            <div class="ls-nav-links">
+                <a href="../../index.html">Home</a>
+                <a href="../ai-tools.html">Tools</a>
+                <a href="../guides-library.html">Guides</a>
+                <a href="../dashboard.html">Dashboard</a>
+            </div>
+            <button class="ls-mobile-menu" onclick="toggleMobileMenu()">☰</button>
+        </div>
+    </nav>
+
+    <div class="tool-container">
+        <div class="tool-header">
+            <span class="tool-icon">💪</span>
+            <h1>Workout Suggestor</h1>
+            <p>Get simple home workouts - no equipment needed</p>
+        </div>
+
+        <div class="tool-card">
+            <div class="form-group">
+                <label>How much time do you have?</label>
+                <div class="quick-options">
+                    <button class="quick-option" onclick="setTime('10 minutes')">10 min</button>
+                    <button class="quick-option selected" onclick="setTime('20 minutes')">20 min</button>
+                    <button class="quick-option" onclick="setTime('30 minutes')">30 min</button>
+                    <button class="quick-option" onclick="setTime('45 minutes')">45 min</button>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>What's your focus?</label>
+                <div class="quick-options">
+                    <button class="quick-option" onclick="setFocus('full body')">Full Body</button>
+                    <button class="quick-option" onclick="setFocus('upper body')">Upper Body</button>
+                    <button class="quick-option" onclick="setFocus('lower body')">Lower Body</button>
+                    <button class="quick-option" onclick="setFocus('core')">Core</button>
+                    <button class="quick-option" onclick="setFocus('cardio')">Cardio</button>
+                    <button class="quick-option" onclick="setFocus('stretching')">Stretching</button>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Fitness level</label>
+                <div class="quick-options">
+                    <button class="quick-option" onclick="setLevel('beginner')">Beginner</button>
+                    <button class="quick-option selected" onclick="setLevel('intermediate')">Intermediate</button>
+                    <button class="quick-option" onclick="setLevel('advanced')">Advanced</button>
+                </div>
+            </div>
+
+            <button class="submit-btn" id="submitBtn" onclick="getWorkout()">
+                <span id="btnText">💪 Get My Workout</span>
+                <div class="spinner" id="spinner" style="display: none;"></div>
+            </button>
+            <div class="error-message" id="errorMsg"></div>
+        </div>
+
+        <div class="result-section" id="resultSection">
+            <div class="result-card" style="border-left-color: #f5576c;">
+                <div class="result-header">
+                    <h3>🏋️ Your Workout</h3>
+                    <div class="result-actions">
+                        <button class="action-btn" onclick="copyResult()">📋 Copy</button>
+                        <button class="action-btn" onclick="saveResult()">💾 Save</button>
+                        <button class="action-btn" onclick="getWorkout()">🔄 New</button>
+                    </div>
+                </div>
+                <div class="result-content" id="resultContent"></div>
+            </div>
+        </div>
+
+        <div class="related-tools">
+            <h3>Related Tools</h3>
+            <div class="related-grid">
+                <a href="mood-fixer.html" class="related-card"><span class="icon">😊</span><h4>Mood Fixer</h4></a>
+                <a href="productivity-boost.html" class="related-card"><span class="icon">⚡</span><h4>Productivity Boost</h4></a>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../js/notifications.js"></script>
+    <script src="../../js/ai-tools-core.js"></script>
+    <script>
+        const TOOL_NAME = 'Workout Suggestor';
+        const SYSTEM_PROMPT = `You are a friendly fitness coach. Create home workouts that require no equipment. Include warm-up, main workout with sets/reps, and cool-down. Be specific with exercise names and form tips. Make it achievable and motivating.`;
+        trackToolUsage(TOOL_NAME, window.location.href);
+
+        let workoutTime = '20 minutes', workoutFocus = '', fitnessLevel = 'intermediate';
+
+        function setTime(t) { workoutTime = t; updateSelection(event.target, '.form-group:nth-child(1) .quick-options'); }
+        function setFocus(f) { workoutFocus = f; updateSelection(event.target, '.form-group:nth-child(2) .quick-options'); }
+        function setLevel(l) { fitnessLevel = l; updateSelection(event.target, '.form-group:nth-child(3) .quick-options'); }
+        function updateSelection(el, parent) {
+            document.querySelectorAll(parent + ' .quick-option').forEach(b => b.classList.remove('selected'));
+            el.classList.add('selected');
+        }
+
+        async function getWorkout() {
+            const message = `Create a ${workoutTime} ${workoutFocus || 'full body'} home workout for ${fitnessLevel} level. No equipment needed.`;
+            setLoading(true); hideError();
+            try {
+                const response = await callAI(SYSTEM_PROMPT, message);
+                showResult(response);
+            } catch (error) { showError('Something went wrong. Please try again.'); }
+            finally { setLoading(false); }
+        }
+
+        function showResult(text) {
+            document.getElementById('resultContent').textContent = text;
+            document.getElementById('resultSection').classList.add('show');
+            document.getElementById('resultSection').scrollIntoView({ behavior: 'smooth' });
+        }
+        function setLoading(l) {
+            document.getElementById('submitBtn').disabled = l;
+            document.getElementById('btnText').style.display = l ? 'none' : 'inline';
+            document.getElementById('spinner').style.display = l ? 'block' : 'none';
+        }
+        function showError(m) { const e = document.getElementById('errorMsg'); e.textContent = m; e.classList.add('show'); }
+        function hideError() { document.getElementById('errorMsg').classList.remove('show'); }
+        function copyResult() { copyToClipboard(document.getElementById('resultContent').textContent); }
+        function saveResult() { saveToHistory(TOOL_NAME, `${workoutTime} ${workoutFocus}`, document.getElementById('resultContent').textContent); }
+    </script>
+</body>
+</html>

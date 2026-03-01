@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Use our AI-powered tools to solve your life problems instantly">
+    <title>Tool Name - All-in-One Life Problem Solver</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/single-tool.css">
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="../index.html" class="logo">
+                <span class="logo-icon">🧩</span>
+                <span class="logo-text">Life Problem Solver</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="ai-tools.html">Tools</a></li>
+                <li><a href="guides.html">Guides</a></li>
+                <li><a href="about-new.html">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Dynamic Tool Header -->
+    <section class="tool-header">
+        <div class="container">
+            <div class="tool-header-content">
+                <div class="tool-icon" id="toolIcon">📝</div>
+                <span class="tool-category" id="toolCategory">Career</span>
+                <h1 class="tool-title" id="toolTitle">Resume Analyzer</h1>
+                <p class="tool-description" id="toolDescription">Get instant feedback on your resume and improve your chances of landing your dream job</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tool Interaction Area -->
+    <section class="tool-interaction">
+        <div class="container">
+            <div class="tool-workspace">
+                <!-- Input Section -->
+                <div class="input-section">
+                    <h2 class="section-title">Enter Your Details</h2>
+                    <div class="input-card">
+                        <div class="input-instructions" id="inputInstructions">
+                            <p>📋 Type or paste your content to get instant analysis</p>
+                        </div>
+                        <div class="input-fields" id="inputFields">
+                            <textarea 
+                                class="input-textarea" 
+                                id="mainInput" 
+                                placeholder="Paste your resume text here..."
+                                rows="12"
+                            ></textarea>
+                        </div>
+                        <button class="generate-btn" id="generateBtn">
+                            <span class="btn-icon">✨</span>
+                            <span class="btn-text">Generate Result</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Output Section -->
+                <div class="output-section">
+                    <h2 class="section-title">Result</h2>
+                    <div class="output-card">
+                        <div class="output-placeholder" id="outputPlaceholder">
+                            <div class="placeholder-icon">📊</div>
+                            <p>Your result will appear here</p>
+                            <span class="placeholder-hint">Fill in the details and click "Generate Result"</span>
+                        </div>
+                        <div class="output-content" id="outputContent" style="display: none;">
+                            <!-- Dynamic output will be inserted here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Info / Tips Section -->
+    <section class="tool-tips">
+        <div class="container">
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <div class="tip-icon">💡</div>
+                    <h3>How This Tool Helps</h3>
+                    <ul id="helpList">
+                        <li>Analyzes your content instantly</li>
+                        <li>Provides actionable feedback</li>
+                        <li>Saves you time and effort</li>
+                    </ul>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">✅</div>
+                    <h3>Best Practices</h3>
+                    <ul id="practicesList">
+                        <li>Be specific and detailed</li>
+                        <li>Use clear language</li>
+                        <li>Review the output carefully</li>
+                    </ul>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">⚠️</div>
+                    <h3>Common Mistakes</h3>
+                    <ul id="mistakesList">
+                        <li>Providing incomplete information</li>
+                        <li>Using vague descriptions</li>
+                        <li>Ignoring the guidelines</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Tools Section -->
+    <section class="related-tools">
+        <div class="container">
+            <h2 class="section-heading">Related Tools</h2>
+            <div class="related-tools-grid" id="relatedToolsGrid">
+                <!-- Dynamic related tools will be inserted here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-heading">Frequently Asked Questions</h2>
+            <div class="faq-accordion" id="faqAccordion">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>How to use this tool?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Simply enter your information in the input area, click "Generate Result", and get instant AI-powered analysis. The tool will process your input and provide detailed feedback.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Is my data safe?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, your data is completely safe. We don't store any personal information you enter. All processing happens in real-time and your data is not saved on our servers.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Can I use this on mobile?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Absolutely! This tool is fully responsive and works perfectly on all devices including smartphones, tablets, and desktops.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Is this tool free to use?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, all our tools are completely free to use. No registration or payment required.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About Us</h3>
+                    <p>Your all-in-one solution for life's challenges using AI-powered tools.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="ai-tools.html">Tools</a></li>
+                        <li><a href="guides.html">Guides</a></li>
+                        <li><a href="about-new.html">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="request.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">📘</a>
+                        <a href="#" aria-label="Twitter">🐦</a>
+                        <a href="#" aria-label="Instagram">📷</a>
+                        <a href="#" aria-label="LinkedIn">💼</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 All-in-One Life Problem Solver. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/single-tool.js"></script>
+</body>
+</html>

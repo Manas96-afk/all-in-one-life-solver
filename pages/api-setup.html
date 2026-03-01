@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Setup - Life Solver</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/brand-components.css">
+    <link rel="stylesheet" href="../css/notifications.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            padding: 2rem 1rem;
+        }
+        .setup-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .setup-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .setup-header h1 {
+            font-size: 2rem;
+            color: #2d3748;
+            margin-bottom: 0.5rem;
+        }
+        .option-card {
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .option-card:hover {
+            border-color: #667eea;
+        }
+        .option-card.selected {
+            border-color: #667eea;
+            background: rgba(102, 126, 234, 0.05);
+        }
+        .option-title {
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 0.5rem;
+        }
+        .option-desc {
+            color: #718096;
+            font-size: 0.9rem;
+        }
+        .provider-tabs {
+            display: flex;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+        .provider-tab {
+            flex: 1;
+            padding: 0.5rem 1rem;
+            border: 2px solid #e2e8f0;
+            background: white;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .provider-tab.active {
+            border-color: #667eea;
+            background: #667eea;
+            color: white;
+        }
+        .api-input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            margin: 1rem 0;
+            font-family: monospace;
+        }
+        .api-input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        .btn-primary {
+            width: 100%;
+            padding: 1rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 1rem;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+        }
+        .info-box {
+            background: #f7fafc;
+            border-left: 4px solid #667eea;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .status-indicator {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 0.5rem;
+        }
+        .status-offline { background: #fc8181; }
+        .status-online { background: #48bb78; }
+    </style>
+</head>
+<body>
+    <div class="setup-container">
+        <div class="setup-header">
+            <h1>🤖 AI Setup</h1>
+            <p>Choose how you want to use Life Solver's AI features</p>
+        </div>
+
+        <div class="option-card" id="defaultMode" onclick="selectMode('default')">
+            <div class="option-title">
+                <span class="status-indicator status-online"></span>
+                AI Mode (Default - Recommended)
+            </div>
+            <div class="option-desc">
+                Use our shared Gemini AI for all users. Real AI responses, completely free!
+            </div>
+        </div>
+
+        <div class="option-card" id="premiumMode" onclick="selectMode('premium')">
+            <div class="option-title">
+                <span class="status-indicator status-online"></span>
+                Premium Mode (Your Own API Key)
+            </div>
+            <div class="option-desc">
+                Use your own Gemini or OpenAI API key for unlimited usage and priority access.
+            </div>
+        </div>
+
+        <div class="option-card" id="offlineMode" onclick="selectMode('offline')">
+            <div class="option-title">
+                <span class="status-indicator status-offline"></span>
+                Offline Mode
+            </div>
+            <div class="option-desc">
+                Use built-in responses only. No AI, but works without internet.
+            </div>
+        </div>
+
+        <div id="apiSetup" style="display: none;">
+            <div class="provider-tabs" style="display: flex; gap: 0.5rem; margin: 1rem 0;">
+                <button id="geminiTab" class="provider-tab active" onclick="selectProvider('gemini')">Gemini (Recommended)</button>
+                <button id="openaiTab" class="provider-tab" onclick="selectProvider('openai')">OpenAI</button>
+            </div>
+            
+            <div id="geminiSetup">
+                <div class="info-box">
+                    <h4>✅ Gemini API (Recommended):</h4>
+                    <ol>
+                        <li>Go to <a href="https://makersuite.google.com/app/apikey" target="_blank">Google AI Studio</a></li>
+                        <li>Sign in with Google account</li>
+                        <li>Click "Create API Key"</li>
+                        <li>Copy the key (starts with "AIza")</li>
+                        <li>Paste it below</li>
+                    </ol>
+                </div>
+                
+                <input type="password" id="geminiKeyInput" class="api-input" placeholder="AIza...your-gemini-key-here">
+                
+                <div class="info-box">
+                    <p><strong>✅ Works directly from browser</strong> - No backend needed!</p>
+                    <p><strong>✅ Free tier:</strong> 60 requests per minute</p>
+                    <p><strong>Privacy:</strong> Your API key is stored locally only.</p>
+                </div>
+            </div>
+            
+            <div id="openaiSetup" style="display: none;">
+                <div class="info-box">
+                    <h4>OpenAI API:</h4>
+                    <ol>
+                        <li>Go to <a href="https://platform.openai.com/api-keys" target="_blank">platform.openai.com/api-keys</a></li>
+                        <li>Sign up or log in</li>
+                        <li>Click "Create new secret key"</li>
+                        <li>Copy the key (starts with "sk-")</li>
+                        <li>Paste it below</li>
+                    </ol>
+                </div>
+                
+                <input type="password" id="openaiKeyInput" class="api-input" placeholder="sk-...your-openai-key-here">
+                
+                <div class="info-box">
+                    <p><strong>⚠️ Requires backend proxy</strong> due to browser security</p>
+                    <p><strong>Cost:</strong> ~$0.002 per request</p>
+                    <p><strong>Privacy:</strong> Your API key is stored locally only.</p>
+                </div>
+            </div>
+        </div>
+
+        <button class="btn-primary" onclick="saveSettings()">
+            <span id="btnText">Continue with Offline Mode</span>
+        </button>
+
+        <div style="text-align: center; margin-top: 2rem;">
+            <a href="../index.html" style="color: #667eea; text-decoration: none;">← Back to Home</a>
+        </div>
+    </div>
+
+    <script src="../js/notifications.js"></script>
+    <script>
+        let selectedMode = 'offline';
+        let selectedProvider = 'gemini';
+
+        function selectMode(mode) {
+            selectedMode = mode;
+            
+            // Update UI
+            document.querySelectorAll('.option-card').forEach(card => {
+                card.classList.remove('selected');
+            });
+            
+            if (mode === 'default') {
+                document.getElementById('defaultMode').classList.add('selected');
+                document.getElementById('apiSetup').style.display = 'none';
+                document.getElementById('btnText').textContent = 'Continue with AI Mode';
+            } else if (mode === 'premium') {
+                document.getElementById('premiumMode').classList.add('selected');
+                document.getElementById('apiSetup').style.display = 'block';
+                document.getElementById('btnText').textContent = 'Save Premium API Key';
+            } else {
+                document.getElementById('offlineMode').classList.add('selected');
+                document.getElementById('apiSetup').style.display = 'none';
+                document.getElementById('btnText').textContent = 'Continue with Offline Mode';
+            }
+        }
+
+        function selectProvider(provider) {
+            selectedProvider = provider;
+            
+            // Update tabs
+            document.querySelectorAll('.provider-tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.getElementById(provider + 'Tab').classList.add('active');
+            
+            // Show/hide setup sections
+            document.getElementById('geminiSetup').style.display = provider === 'gemini' ? 'block' : 'none';
+            document.getElementById('openaiSetup').style.display = provider === 'openai' ? 'block' : 'none';
+        }
+
+        function saveSettings() {
+            if (selectedMode === 'default') {
+                // Use default AI mode with shared API key
+                localStorage.removeItem('openai_api_key');
+                localStorage.removeItem('gemini_api_key');
+                localStorage.setItem('ai_mode', 'api');
+                localStorage.setItem('ai_provider', 'gemini');
+                
+                if (typeof showInAppNotification === 'function') {
+                    showInAppNotification('✅ AI mode enabled! Using shared Gemini AI.', 'success');
+                } else {
+                    alert('AI mode enabled! Using shared Gemini AI.');
+                }
+                
+                setTimeout(() => {
+                    window.location.href = '../index.html';
+                }, 1500);
+                
+            } else if (selectedMode === 'offline') {
+                // Clear any existing API keys
+                localStorage.removeItem('openai_api_key');
+                localStorage.removeItem('gemini_api_key');
+                localStorage.setItem('ai_mode', 'offline');
+                
+                if (typeof showInAppNotification === 'function') {
+                    showInAppNotification('✅ Offline mode enabled! All tools ready to use.', 'success');
+                } else {
+                    alert('Offline mode enabled! All tools ready to use.');
+                }
+                
+                setTimeout(() => {
+                    window.location.href = '../index.html';
+                }, 1500);
+                
+            } else {
+                // Premium mode - save user's custom API key
+                let apiKey, keyPrefix, providerName;
+                
+                if (selectedProvider === 'gemini') {
+                    apiKey = document.getElementById('geminiKeyInput').value.trim();
+                    keyPrefix = 'AIza';
+                    providerName = 'Gemini';
+                } else {
+                    apiKey = document.getElementById('openaiKeyInput').value.trim();
+                    keyPrefix = 'sk-';
+                    providerName = 'OpenAI';
+                }
+                
+                if (!apiKey) {
+                    alert('Please enter your API key');
+                    return;
+                }
+                
+                if (!apiKey.startsWith(keyPrefix)) {
+                    alert(`${providerName} API key should start with "${keyPrefix}"`);
+                    return;
+                }
+                
+                // Save API key and provider
+                if (selectedProvider === 'gemini') {
+                    localStorage.setItem('gemini_api_key', apiKey);
+                } else {
+                    localStorage.setItem('openai_api_key', apiKey);
+                }
+                
+                localStorage.setItem('ai_provider', selectedProvider);
+                localStorage.setItem('ai_mode', 'api');
+                
+                if (typeof showInAppNotification === 'function') {
+                    showInAppNotification(`✅ Premium ${providerName} API key saved!`, 'success');
+                } else {
+                    alert(`Premium ${providerName} API key saved!`);
+                }
+                
+                setTimeout(() => {
+                    window.location.href = '../index.html';
+                }, 1500);
+            }
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            // Check current settings
+            const currentMode = localStorage.getItem('ai_mode') || 'api'; // Default to AI mode
+            const currentProvider = localStorage.getItem('ai_provider') || 'gemini';
+            const geminiKey = localStorage.getItem('gemini_api_key');
+            const openaiKey = localStorage.getItem('openai_api_key');
+            
+            if ((geminiKey || openaiKey) && currentMode === 'api') {
+                // User has premium API key
+                selectMode('premium');
+                selectProvider(currentProvider);
+                
+                if (currentProvider === 'gemini' && geminiKey) {
+                    document.getElementById('geminiKeyInput').value = geminiKey;
+                } else if (currentProvider === 'openai' && openaiKey) {
+                    document.getElementById('openaiKeyInput').value = openaiKey;
+                }
+            } else if (currentMode === 'api') {
+                // Default AI mode (using shared key)
+                selectMode('default');
+            } else {
+                // Offline mode
+                selectMode('offline');
+            }
+        });
+    </script>
+</body>
+</html>

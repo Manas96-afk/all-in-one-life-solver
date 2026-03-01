@@ -1,0 +1,450 @@
+/* Life Hacks Page Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family, 'Inter', sans-serif);
+    background: var(--gradient-soft-bg, linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%));
+    min-height: 100vh;
+}
+
+/* Navbar */
+.ls-navbar {
+    background: white;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.ls-navbar .ls-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.ls-nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--dark-text, #2d3748);
+    text-decoration: none;
+}
+
+.ls-nav-logo .logo-icon {
+    font-size: 1.75rem;
+}
+
+.ls-nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.ls-nav-links a {
+    color: var(--body-text, #4a5568);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.ls-nav-links a:hover,
+.ls-nav-links a.active {
+    color: var(--primary-blue, #667eea);
+}
+
+.ls-mobile-menu {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hacks-hero {
+    background: var(--gradient-primary, linear-gradient(135deg, #667eea 0%, #764ba2 100%));
+    color: white;
+    padding: 4rem 0 3rem;
+    text-align: center;
+}
+
+.hacks-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    opacity: 0.95;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+}
+
+/* Search */
+.hacks-search {
+    max-width: 500px;
+    margin: 0 auto 2rem;
+    position: relative;
+}
+
+.hacks-search .search-icon {
+    position: absolute;
+    left: 1.25rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.25rem;
+}
+
+.hacks-search input {
+    width: 100%;
+    padding: 1rem 1rem 1rem 3.5rem;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.hacks-search input:focus {
+    outline: none;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Hack of the Day */
+.hack-of-day {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    padding: 1.5rem 2rem;
+    border-radius: 16px;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.hack-of-day-badge {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.25);
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+.hack-of-day h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.hack-of-day p {
+    opacity: 0.95;
+    line-height: 1.6;
+    margin-bottom: 0.75rem;
+}
+
+.hod-category {
+    display: inline-block;
+    background: white;
+    color: var(--primary-blue, #667eea);
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+/* Category Filter */
+.category-filter {
+    background: white;
+    padding: 1.5rem 0;
+    position: sticky;
+    top: 60px;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.filter-tabs {
+    display: flex;
+    gap: 0.75rem;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+    scrollbar-width: none;
+}
+
+.filter-tabs::-webkit-scrollbar {
+    display: none;
+}
+
+.filter-tab {
+    padding: 0.625rem 1.25rem;
+    background: var(--bg-gray, #f7fafc);
+    border: 2px solid transparent;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+    color: var(--body-text, #4a5568);
+}
+
+.filter-tab:hover {
+    border-color: var(--primary-blue, #667eea);
+    color: var(--primary-blue, #667eea);
+}
+
+.filter-tab.active {
+    background: var(--gradient-primary, linear-gradient(135deg, #667eea 0%, #764ba2 100%));
+    color: white;
+    border-color: transparent;
+}
+
+/* Main Content */
+.hacks-main {
+    padding: 2rem 0 4rem;
+}
+
+/* Stats Bar */
+.hacks-stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding: 0 0.5rem;
+}
+
+.hacks-stats span {
+    color: var(--light-text, #718096);
+    font-weight: 500;
+}
+
+.sort-options {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.sort-options label {
+    color: var(--light-text, #718096);
+    font-size: 0.9rem;
+}
+
+.sort-options select {
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--border-gray, #e2e8f0);
+    border-radius: 8px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    background: white;
+}
+
+/* Hacks Grid */
+.hacks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Hack Card */
+.hack-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border-left: 4px solid var(--primary-blue, #667eea);
+    cursor: pointer;
+}
+
+.hack-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.hack-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.75rem;
+}
+
+.hack-card h3 {
+    font-size: 1.1rem;
+    color: var(--dark-text, #2d3748);
+    flex: 1;
+    margin-right: 0.5rem;
+}
+
+.hack-number {
+    background: var(--bg-gray, #f7fafc);
+    color: var(--light-text, #718096);
+    padding: 0.25rem 0.5rem;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.hack-card p {
+    color: var(--body-text, #4a5568);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+.hack-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.hack-category {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.hack-meta {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.hack-difficulty,
+.hack-time {
+    font-size: 0.75rem;
+    color: var(--light-text, #718096);
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+/* Difficulty Colors */
+.difficulty-easy { color: var(--success-green, #48bb78); }
+.difficulty-medium { color: var(--warning-orange, #ed8936); }
+.difficulty-hard { color: var(--error-red, #fc8181); }
+
+/* Save Button */
+.hack-save-btn {
+    background: none;
+    border: none;
+    font-size: 1.25rem;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: all 0.3s ease;
+}
+
+.hack-save-btn:hover,
+.hack-save-btn.saved {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* Loading State */
+.loading-state {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 4rem 2rem;
+    color: var(--light-text, #718096);
+}
+
+/* No Results */
+.no-results {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 4rem 2rem;
+    color: var(--light-text, #718096);
+}
+
+.no-results h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--dark-text, #2d3748);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .ls-nav-links {
+        display: none;
+    }
+    
+    .ls-mobile-menu {
+        display: block;
+    }
+    
+    .hacks-hero h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .hacks-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .hacks-stats {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: flex-start;
+    }
+    
+    .category-filter {
+        top: 56px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hacks-hero {
+        padding: 3rem 0 2rem;
+    }
+    
+    .hacks-hero h1 {
+        font-size: 1.75rem;
+    }
+    
+    .hack-of-day {
+        padding: 1.25rem;
+    }
+    
+    .hack-card {
+        padding: 1.25rem;
+    }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hack-card {
+    animation: fadeInUp 0.5s ease forwards;
+}
+
+.hack-card:nth-child(1) { animation-delay: 0.05s; }
+.hack-card:nth-child(2) { animation-delay: 0.1s; }
+.hack-card:nth-child(3) { animation-delay: 0.15s; }
+.hack-card:nth-child(4) { animation-delay: 0.2s; }
+.hack-card:nth-child(5) { animation-delay: 0.25s; }
+.hack-card:nth-child(6) { animation-delay: 0.3s; }

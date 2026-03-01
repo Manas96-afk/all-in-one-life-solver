@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Tools | All-in-One Life Problem Solver</title>
+    <meta name="description" content="Smart AI tools for every life problem. Instant solutions for career, relationships, study, fitness, emotions, and productivity.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/ai-tools.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-lightbulb"></i>
+                <span>Life Solver</span>
+            </div>
+            <div class="nav-links">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="category.html" class="nav-link">Categories</a>
+                <a href="ai-tools.html" class="nav-link active">AI Tools</a>
+                <a href="about-new.html" class="nav-link">About</a>
+            </div>
+            <button class="mobile-menu-btn" id="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <section class="header-section">
+        <div class="container">
+            <h1 class="header-title">Smart AI Tools for Every Life Problem</h1>
+            <p class="header-subtitle">Instant solutions for career, relationships, study, fitness, emotions, and productivity.</p>
+        </div>
+    </section>
+
+    <!-- Category Tabs -->
+    <section class="category-tabs-section">
+        <div class="container">
+            <div class="category-tabs">
+                <button class="tab-btn active" data-category="all">All</button>
+                <button class="tab-btn" data-category="career">Career</button>
+                <button class="tab-btn" data-category="study">Study</button>
+                <button class="tab-btn" data-category="relationship">Relationship</button>
+                <button class="tab-btn" data-category="fitness">Fitness</button>
+                <button class="tab-btn" data-category="productivity">Productivity</button>
+                <button class="tab-btn" data-category="mental-wellness">Mental Wellness</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools Grid Section -->
+    <section class="tools-grid-section">
+        <div class="container">
+            <div class="tools-grid" id="tools-grid">
+                <!-- Career Tools -->
+                <div class="tool-card" data-category="career">
+                    <div class="tool-icon">📝</div>
+                    <h3 class="tool-name">Resume Analyzer</h3>
+                    <p class="tool-description">Get instant feedback on your resume</p>
+                    <span class="category-chip career-chip">Career</span>
+                    <button class="tool-btn">Open Tool</button>
+                </div>
+
+                <div class="tool-card" data-category="career">
+                    <div class="tool-icon">🎯</div>
+                    <h3 class="tool-name">Career Path Selector</h3>
+                    <p class="tool-description">Find the right career direction for you</p>
+                    <span class="category-chip career-chip">Career</span>
+                    <button class="tool-btn">Open Tool</button>
+                </div>
+
+                <div class="tool-card" data-category="career">
+                    <div class="tool-icon">💼</div>
+                    <h3 class="tool-name">Interview Answer Generator</h3>
+                    <p class="tool-description">Prepare perfect interview responses</p>
+                    <span class="category-chip career-chip">Career</span>
+                    <button class="tool-btn">Open Tool</button>
+                </div>
+
+                <div class="tool-card" data-category="career">
+                    <div class="tool-icon">✉️</div>
+                    <h3 class="tool-name">Professional Email Helper</h3>
+                    <p class="tool-description">Write clear professional emails</p>
+                    <span class="category-chip career-chip">Career</span>
+                    <button class="tool-btn">Open Tool</button>
+                </div>
+
+                <!-- Study Tools -->
+                <div class="tool-card" data-category="study">
+                    <div class="tool-icon">📅</div>
+                    <h3 class="tool-name">Study Planner</h3>
+                    <p class="tool-description">Create perfect study schedules</p>
+                    <span class="category-chip study-chip">Study</span>
+                    <button class="tool-btn">Open Tool</button>
+                </div>
+
+                <div class="tool-card" data-category="study">
+                    <div class="tool-icon">📋</div>
+                    <h3 class="tool-name">Notes Summarizer</h3>
+                    <p class="tool-description">Condense notes into key points</p>
+                    <span class="category-chip study-chip">Study</span>
+                    <button class="tool-btn">Open Tool</button>
+                </div>
+
+                <div class="tool-card" data-category="study">
+                    <div class="tool-icon">📚</div>
+                    <h3 class="tool-name">Exam Preparation Guide</h3>
+                    <p class="tool-description">Get personalized exam strategies</p>
+                    <span class="category-chip study-chip">Study</span>
+                    <button class="tool-btn">Open Tool</button>
+                </div>
+
+                <div class="tool-card" data-category="study">
+                    <div class="tool-icon">🎯</div>
+                    <h3 class="tool-name">Focus Booster</h3>
+                    <p class="tool-description">Improve concentration and focus</p>
+                    <span class="category-chip study-chip">Study</span>
+                    <button class="tool-btn">Open Tool</button>
+                </div>
+
+                <!-- Relationship Tools -->
+                <div class="tool-card" data-category="relationship">
+                    <div class="tool-icon">💑</div>
+                    <h3 class="tool-name">Relationship Analyzer</h3>
+                    <p class="tool-description">Understand your relationship better</p>
+                    <span class="category-chip relationship-chip">Relationship</span>
+                    <button class="tool-btn">Open Tool</button>
+                </div>
+
+                <div class="tool-card" data-category="relationship">
+                    <div class="tool-icon">💬</div>
+                    <h3 class="tool-name">Message Tone Checker</h3>
+                    <p class="tool-description">Ensure your messages sound right</p>
+                    <span class="category-chip relationship-chip">Relationship</span>
+                    <button class="tool-btn">Open Tool</button>
+                </div>
+
+                <div class="tool-card" data-category="relationship">
+                    <div class="tool-icon">🤝</div>
+                    <h3 class="tool-name">Conflict Resolution Advice</h3>
+                    <p class="tool-description">Handle disagreements peacefully</p>
+                    <span class="category-chip relationship-chip">Relationship</span>
+                    <button class="tool-btn">Open Tool</button>
+                </div>
+
+                <div class="tool-card" data-category="relationship">
+                    <div class="tool-icon">📱</div>
+                    <h3 class="tool-name">First Text Generator</h3>
+                    <p class="tool-description">Start conversations confidently</p>
+                    <span class="category-chip relationship-chip">Relationship</span>
+                    <button class="tool-btn">Open Tool</button>
+                </div>
+
+                <!-- Fitness Tools -->
+                <div class="tool-card" data-category="fitness">
+                    <div class="tool-icon">🥗</div>
+                    <h3 class="tool-name">Diet Generator</h3>
+                    <p class="tool-description">Get personalized meal plans</p>
+                    <span class="category-chip fitness-chip">Fitness</span>
+                    <button class="tool-btn">Open Tool</button>
+                </div>
+
+                <div class="tool-card" data-category="fitness">
+                    <div class="tool-icon">💪</div>
+                    <h3 class="tool-name">Workout Planner</h3>
+                    <p class="tool-description">Create custom workout routines</p>
+                    <span class="category-chip fitness-chip">Fitness</span>
+                    <button class="tool-btn">Open Tool</button>
+                </div>
+
+                <div class="tool-card" data-category="fitness">
+                    <div class="tool-icon">✅</div>
+                    <h3 class="tool-name">Daily Habit Maker</h3>
+                    <p class="tool-description">Build lasting healthy habits</p>
+                    <span class="category-chip fitness-chip">Fitness</span>
+                    <button class="tool-btn">Open Tool</button>
+                </div>
+
+                <div class="tool-card" data-category="fitness">
+                    <div class="tool-icon">😴</div>
+                    <h3 class="tool-name">Sleep Routine Fixer</h3>
+                    <p class="tool-description">Improve your sleep quality</p>
+                    <span class="category-chip fitness-chip">Fitness</span>
+                    <button class="tool-btn">Open Tool</button>
+                </div>
+
+                <!-- Productivity Tools -->
+                <div class="tool-card" data-category="productivity">
+                    <div class="tool-icon">⏰</div>
+                    <h3 class="tool-name">Time Management Planner</h3>
+                    <p class="tool-description">Organize your day effectively</p>
+                    <span class="category-chip productivity-chip">Productivity</span>
+                    <button class="tool-btn">Open Tool</button>
+                </div>
+
+                <div class="tool-card" data-category="productivity">
+                    <div class="tool-icon">📊</div>
+                    <h3 class="tool-name">Task Breakdown Tool</h3>
+                    <p class="tool-description">Split big tasks into small steps</p>
+                    <span class="category-chip productivity-chip">Productivity</span>
+                    <button class="tool-btn">Open Tool</button>
+                </div>
+
+                <div class="tool-card" data-category="productivity">
+                    <div class="tool-icon">🚀</div>
+                    <h3 class="tool-name">Motivation Booster</h3>
+                    <p class="tool-description">Get inspired to take action</p>
+                    <span class="category-chip productivity-chip">Productivity</span>
+                    <button class="tool-btn">Open Tool</button>
+                </div>
+
+                <div class="tool-card" data-category="productivity">
+                    <div class="tool-icon">🌅</div>
+                    <h3 class="tool-name">Morning Routine Builder</h3>
+                    <p class="tool-description">Start your day with energy</p>
+                    <span class="category-chip productivity-chip">Productivity</span>
+                    <button class="tool-btn">Open Tool</button>
+                </div>
+
+                <!-- Mental Wellness Tools -->
+                <div class="tool-card" data-category="mental-wellness">
+                    <div class="tool-icon">😊</div>
+                    <h3 class="tool-name">Mood Helper</h3>
+                    <p class="tool-description">Track and improve your mood</p>
+                    <span class="category-chip wellness-chip">Mental Wellness</span>
+                    <button class="tool-btn">Open Tool</button>
+                </div>
+
+                <div class="tool-card" data-category="mental-wellness">
+                    <div class="tool-icon">💎</div>
+                    <h3 class="tool-name">Confidence Builder</h3>
+                    <p class="tool-description">Boost your self-confidence</p>
+                    <span class="category-chip wellness-chip">Mental Wellness</span>
+                    <button class="tool-btn">Open Tool</button>
+                </div>
+
+                <div class="tool-card" data-category="mental-wellness">
+                    <div class="tool-icon">🧘</div>
+                    <h3 class="tool-name">Stress Relief Tips</h3>
+                    <p class="tool-description">Calm your mind instantly</p>
+                    <span class="category-chip wellness-chip">Mental Wellness</span>
+                    <button class="tool-btn">Open Tool</button>
+                </div>
+
+                <div class="tool-card" data-category="mental-wellness">
+                    <div class="tool-icon">🧠</div>
+                    <h3 class="tool-name">Overthinking Fixer</h3>
+                    <p class="tool-description">Stop overthinking and act</p>
+                    <span class="category-chip wellness-chip">Mental Wellness</span>
+                    <button class="tool-btn">Open Tool</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recommend a Tool Section -->
+    <section class="recommend-section">
+        <div class="container">
+            <div class="recommend-content">
+                <h2>Want a custom tool? Suggest one and we'll build it.</h2>
+                <button class="recommend-btn" id="recommend-btn">Submit Idea</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal for Recommend Tool -->
+    <div class="modal" id="recommend-modal">
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close">&times;</button>
+            <h2>Suggest a Tool</h2>
+            <form class="recommend-form" id="recommend-form">
+                <div class="form-group">
+                    <label>Tool Name</label>
+                    <input type="text" placeholder="e.g., Budget Planner" required>
+                </div>
+                <div class="form-group">
+                    <label>Category</label>
+                    <select required>
+                        <option value="">Select category</option>
+                        <option value="career">Career</option>
+                        <option value="study">Study</option>
+                        <option value="relationship">Relationship</option>
+                        <option value="fitness">Fitness</option>
+                        <option value="productivity">Productivity</option>
+                        <option value="mental-wellness">Mental Wellness</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Description</label>
+                    <textarea placeholder="What should this tool do?" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Submit Suggestion</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="about-new.html">About</a>
+                    <a href="request.html">Contact</a>
+                    <a href="#">Privacy</a>
+                    <a href="#">Terms</a>
+                </div>
+                <div class="footer-social">
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <p class="footer-copyright">© 2025 Life Solver. Made with ❤️ to make your life easier.</p>
+        </div>
+    </footer>
+
+    <script src="../js/ai-tools.js"></script>
+</body>
+</html>

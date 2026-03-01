@@ -1,0 +1,414 @@
+{
+  "categories": [
+    { "id": "productivity", "name": "Productivity", "icon": "⚡", "color": "#667eea" },
+    { "id": "study", "name": "Study", "icon": "📚", "color": "#4facfe" },
+    { "id": "fitness", "name": "Fitness", "icon": "💪", "color": "#f5576c" },
+    { "id": "mental", "name": "Mental Health", "icon": "🧘", "color": "#a8edea" },
+    { "id": "career", "name": "Career", "icon": "💼", "color": "#ffecd2" },
+    { "id": "finance", "name": "Finance", "icon": "💰", "color": "#48bb78" },
+    { "id": "relationships", "name": "Relationships", "icon": "❤️", "color": "#fc8181" },
+    { "id": "health", "name": "Health", "icon": "🏥", "color": "#9f7aea" }
+  ],
+  "hacks": [
+    {
+      "id": 1,
+      "title": "2-Minute Rule",
+      "description": "If a task takes less than 2 minutes, do it immediately. This prevents small tasks from piling up.",
+      "category": "productivity",
+      "difficulty": "easy",
+      "timeToApply": "instant"
+    },
+    {
+      "id": 2,
+      "title": "Pomodoro Technique",
+      "description": "Work for 25 minutes, then take a 5-minute break. After 4 cycles, take a longer 15-30 minute break.",
+      "category": "productivity",
+      "difficulty": "easy",
+      "timeToApply": "30 min"
+    },
+    {
+      "id": 3,
+      "title": "Eat the Frog",
+      "description": "Do your hardest task first thing in the morning when your willpower is strongest.",
+      "category": "productivity",
+      "difficulty": "medium",
+      "timeToApply": "daily"
+    },
+    {
+      "id": 4,
+      "title": "Time Blocking",
+      "description": "Schedule specific blocks of time for different tasks. Treat these blocks like appointments.",
+      "category": "productivity",
+      "difficulty": "medium",
+      "timeToApply": "weekly"
+    },
+    {
+      "id": 5,
+      "title": "The 5-Second Rule",
+      "description": "When you have an impulse to act on a goal, count 5-4-3-2-1 and physically move before your brain stops you.",
+      "category": "productivity",
+      "difficulty": "easy",
+      "timeToApply": "instant"
+    },
+    {
+      "id": 6,
+      "title": "Active Recall",
+      "description": "Instead of re-reading notes, close the book and try to recall information from memory. This strengthens retention.",
+      "category": "study",
+      "difficulty": "medium",
+      "timeToApply": "per session"
+    },
+    {
+      "id": 7,
+      "title": "Spaced Repetition",
+      "description": "Review material at increasing intervals: 1 day, 3 days, 1 week, 2 weeks. Use apps like Anki.",
+      "category": "study",
+      "difficulty": "medium",
+      "timeToApply": "ongoing"
+    },
+    {
+      "id": 8,
+      "title": "Feynman Technique",
+      "description": "Explain a concept in simple terms as if teaching a child. If you can't, you don't understand it well enough.",
+      "category": "study",
+      "difficulty": "medium",
+      "timeToApply": "per topic"
+    },
+    {
+      "id": 9,
+      "title": "Study Before Sleep",
+      "description": "Review important material right before bed. Your brain consolidates memories during sleep.",
+      "category": "study",
+      "difficulty": "easy",
+      "timeToApply": "nightly"
+    },
+    {
+      "id": 10,
+      "title": "The Cornell Method",
+      "description": "Divide your notes into 3 sections: notes, cues, and summary. Review cues to test yourself.",
+      "category": "study",
+      "difficulty": "easy",
+      "timeToApply": "per class"
+    },
+    {
+      "id": 11,
+      "title": "7-Minute Workout",
+      "description": "A quick high-intensity circuit: jumping jacks, wall sit, push-ups, crunches, step-ups, squats, tricep dips, plank, high knees, lunges, push-up rotations, side plank.",
+      "category": "fitness",
+      "difficulty": "medium",
+      "timeToApply": "7 min"
+    },
+    {
+      "id": 12,
+      "title": "Walk After Meals",
+      "description": "A 10-15 minute walk after eating helps digestion and regulates blood sugar levels.",
+      "category": "fitness",
+      "difficulty": "easy",
+      "timeToApply": "15 min"
+    },
+    {
+      "id": 13,
+      "title": "Desk Stretches",
+      "description": "Every hour, do neck rolls, shoulder shrugs, wrist circles, and stand up to stretch your back.",
+      "category": "fitness",
+      "difficulty": "easy",
+      "timeToApply": "2 min"
+    },
+    {
+      "id": 14,
+      "title": "Stair Climbing",
+      "description": "Always take stairs instead of elevators. It's free cardio that adds up throughout the day.",
+      "category": "fitness",
+      "difficulty": "easy",
+      "timeToApply": "ongoing"
+    },
+    {
+      "id": 15,
+      "title": "Morning Stretch Routine",
+      "description": "Start your day with 5 minutes of stretching: cat-cow, child's pose, forward fold, and gentle twists.",
+      "category": "fitness",
+      "difficulty": "easy",
+      "timeToApply": "5 min"
+    },
+    {
+      "id": 16,
+      "title": "Box Breathing",
+      "description": "Breathe in for 4 seconds, hold for 4, breathe out for 4, hold for 4. Repeat 4 times to reduce stress.",
+      "category": "mental",
+      "difficulty": "easy",
+      "timeToApply": "2 min"
+    },
+    {
+      "id": 17,
+      "title": "Gratitude Journal",
+      "description": "Write 3 things you're grateful for each morning or night. This rewires your brain for positivity.",
+      "category": "mental",
+      "difficulty": "easy",
+      "timeToApply": "5 min"
+    },
+    {
+      "id": 18,
+      "title": "5-4-3-2-1 Grounding",
+      "description": "When anxious, name 5 things you see, 4 you hear, 3 you feel, 2 you smell, 1 you taste.",
+      "category": "mental",
+      "difficulty": "easy",
+      "timeToApply": "2 min"
+    },
+    {
+      "id": 19,
+      "title": "Digital Sunset",
+      "description": "Stop using screens 1 hour before bed. Read a book or journal instead for better sleep.",
+      "category": "mental",
+      "difficulty": "medium",
+      "timeToApply": "nightly"
+    },
+    {
+      "id": 20,
+      "title": "Morning Pages",
+      "description": "Write 3 pages of stream-of-consciousness thoughts every morning to clear your mind.",
+      "category": "mental",
+      "difficulty": "medium",
+      "timeToApply": "20 min"
+    },
+    {
+      "id": 21,
+      "title": "STAR Method",
+      "description": "Answer interview questions with: Situation, Task, Action, Result. This structures your responses clearly.",
+      "category": "career",
+      "difficulty": "medium",
+      "timeToApply": "per interview"
+    },
+    {
+      "id": 22,
+      "title": "LinkedIn Optimization",
+      "description": "Use keywords from job descriptions in your profile. Recruiters search by keywords.",
+      "category": "career",
+      "difficulty": "easy",
+      "timeToApply": "1 hour"
+    },
+    {
+      "id": 23,
+      "title": "Coffee Chat Networking",
+      "description": "Reach out to 1 person per week for a 15-minute virtual coffee. Build relationships before you need them.",
+      "category": "career",
+      "difficulty": "medium",
+      "timeToApply": "weekly"
+    },
+    {
+      "id": 24,
+      "title": "Skill Stacking",
+      "description": "Combine 2-3 average skills to become unique. Writing + Marketing + Data = Content Strategist.",
+      "category": "career",
+      "difficulty": "hard",
+      "timeToApply": "ongoing"
+    },
+    {
+      "id": 25,
+      "title": "Weekly Review",
+      "description": "Every Friday, review what you accomplished, what you learned, and plan next week's priorities.",
+      "category": "career",
+      "difficulty": "easy",
+      "timeToApply": "30 min"
+    },
+    {
+      "id": 26,
+      "title": "50/30/20 Budget",
+      "description": "Allocate 50% of income to needs, 30% to wants, 20% to savings. Simple and effective.",
+      "category": "finance",
+      "difficulty": "easy",
+      "timeToApply": "monthly"
+    },
+    {
+      "id": 27,
+      "title": "24-Hour Rule",
+      "description": "Wait 24 hours before any non-essential purchase over $50. Most impulse urges fade.",
+      "category": "finance",
+      "difficulty": "easy",
+      "timeToApply": "per purchase"
+    },
+    {
+      "id": 28,
+      "title": "Automate Savings",
+      "description": "Set up automatic transfers to savings on payday. You can't spend what you don't see.",
+      "category": "finance",
+      "difficulty": "easy",
+      "timeToApply": "once"
+    },
+    {
+      "id": 29,
+      "title": "No-Spend Days",
+      "description": "Challenge yourself to spend $0 on certain days. Pack lunch, skip coffee shops, stay in.",
+      "category": "finance",
+      "difficulty": "medium",
+      "timeToApply": "weekly"
+    },
+    {
+      "id": 30,
+      "title": "Subscription Audit",
+      "description": "Review all subscriptions monthly. Cancel anything you haven't used in 30 days.",
+      "category": "finance",
+      "difficulty": "easy",
+      "timeToApply": "monthly"
+    },
+    {
+      "id": 31,
+      "title": "Active Listening",
+      "description": "When someone talks, focus fully. Don't plan your response. Summarize what they said before replying.",
+      "category": "relationships",
+      "difficulty": "medium",
+      "timeToApply": "ongoing"
+    },
+    {
+      "id": 32,
+      "title": "5:1 Ratio",
+      "description": "For every negative interaction, have 5 positive ones. This ratio predicts relationship success.",
+      "category": "relationships",
+      "difficulty": "medium",
+      "timeToApply": "ongoing"
+    },
+    {
+      "id": 33,
+      "title": "Weekly Date Night",
+      "description": "Schedule dedicated time with your partner weekly. No phones, no distractions.",
+      "category": "relationships",
+      "difficulty": "easy",
+      "timeToApply": "weekly"
+    },
+    {
+      "id": 34,
+      "title": "I-Statements",
+      "description": "Say 'I feel...' instead of 'You always...'. This reduces defensiveness in conflicts.",
+      "category": "relationships",
+      "difficulty": "medium",
+      "timeToApply": "ongoing"
+    },
+    {
+      "id": 35,
+      "title": "Appreciation Text",
+      "description": "Send one genuine appreciation message to someone daily. Strengthens all relationships.",
+      "category": "relationships",
+      "difficulty": "easy",
+      "timeToApply": "daily"
+    },
+    {
+      "id": 36,
+      "title": "8-8-8 Rule",
+      "description": "Aim for 8 hours of work, 8 hours of personal time, 8 hours of sleep. Balance is key.",
+      "category": "health",
+      "difficulty": "medium",
+      "timeToApply": "daily"
+    },
+    {
+      "id": 37,
+      "title": "Water First",
+      "description": "Drink a full glass of water immediately upon waking. Rehydrates your body after sleep.",
+      "category": "health",
+      "difficulty": "easy",
+      "timeToApply": "daily"
+    },
+    {
+      "id": 38,
+      "title": "20-20-20 Rule",
+      "description": "Every 20 minutes, look at something 20 feet away for 20 seconds. Reduces eye strain.",
+      "category": "health",
+      "difficulty": "easy",
+      "timeToApply": "ongoing"
+    },
+    {
+      "id": 39,
+      "title": "Sleep Schedule",
+      "description": "Go to bed and wake up at the same time daily, even weekends. Regulates your circadian rhythm.",
+      "category": "health",
+      "difficulty": "medium",
+      "timeToApply": "daily"
+    },
+    {
+      "id": 40,
+      "title": "Meal Prep Sunday",
+      "description": "Prepare meals for the week on Sunday. Saves time, money, and ensures healthier eating.",
+      "category": "health",
+      "difficulty": "medium",
+      "timeToApply": "weekly"
+    },
+    {
+      "id": 41,
+      "title": "Inbox Zero",
+      "description": "Process emails to zero daily. Archive, delete, respond, or create a task. Don't let emails pile up.",
+      "category": "productivity",
+      "difficulty": "medium",
+      "timeToApply": "daily"
+    },
+    {
+      "id": 42,
+      "title": "Single-Tasking",
+      "description": "Focus on one task at a time. Multitasking reduces productivity by up to 40%.",
+      "category": "productivity",
+      "difficulty": "medium",
+      "timeToApply": "ongoing"
+    },
+    {
+      "id": 43,
+      "title": "Mind Mapping",
+      "description": "Start with a central idea and branch out related concepts. Great for brainstorming and studying.",
+      "category": "study",
+      "difficulty": "easy",
+      "timeToApply": "per topic"
+    },
+    {
+      "id": 44,
+      "title": "Teach to Learn",
+      "description": "Explain what you learned to someone else. Teaching is the best way to solidify knowledge.",
+      "category": "study",
+      "difficulty": "medium",
+      "timeToApply": "per topic"
+    },
+    {
+      "id": 45,
+      "title": "Body Scan Meditation",
+      "description": "Lie down and mentally scan from head to toe, noticing sensations. Releases tension and stress.",
+      "category": "mental",
+      "difficulty": "easy",
+      "timeToApply": "10 min"
+    },
+    {
+      "id": 46,
+      "title": "Worry Time",
+      "description": "Schedule 15 minutes daily to worry. Outside this time, postpone worries. Reduces anxiety.",
+      "category": "mental",
+      "difficulty": "medium",
+      "timeToApply": "daily"
+    },
+    {
+      "id": 47,
+      "title": "Cold Shower Finish",
+      "description": "End your shower with 30 seconds of cold water. Boosts alertness and immune system.",
+      "category": "health",
+      "difficulty": "medium",
+      "timeToApply": "daily"
+    },
+    {
+      "id": 48,
+      "title": "Standing Desk Intervals",
+      "description": "Alternate between sitting and standing every 30-60 minutes. Reduces back pain and increases energy.",
+      "category": "health",
+      "difficulty": "easy",
+      "timeToApply": "ongoing"
+    },
+    {
+      "id": 49,
+      "title": "Salary Negotiation",
+      "description": "Always negotiate. Research market rates, state your value, and ask for 10-20% more than offered.",
+      "category": "career",
+      "difficulty": "hard",
+      "timeToApply": "per offer"
+    },
+    {
+      "id": 50,
+      "title": "Round-Up Savings",
+      "description": "Use apps that round up purchases to the nearest dollar and save the difference automatically.",
+      "category": "finance",
+      "difficulty": "easy",
+      "timeToApply": "once"
+    }
+  ]
+}

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Planner - Create Your Study Schedule | Life Solver</title>
+    <meta name="description" content="Create a personalized daily study plan. AI-powered study scheduling for better learning.">
+    <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/brand-components.css">
+    <link rel="stylesheet" href="../../css/mini-tool.css">
+    <link rel="stylesheet" href="../../css/notifications.css">
+</head>
+<body>
+    <nav class="ls-navbar">
+        <div class="ls-container">
+            <a href="../../index.html" class="ls-nav-logo"><span>💡</span><span>Life Solver</span></a>
+            <div class="ls-nav-links">
+                <a href="../../index.html">Home</a>
+                <a href="../ai-tools.html">Tools</a>
+                <a href="../guides-library.html">Guides</a>
+                <a href="../dashboard.html">Dashboard</a>
+            </div>
+            <button class="ls-mobile-menu" onclick="toggleMobileMenu()">☰</button>
+        </div>
+    </nav>
+
+    <div class="tool-container">
+        <div class="tool-header">
+            <span class="tool-icon">📚</span>
+            <h1>Study Planner</h1>
+            <p>Create a personalized daily study plan</p>
+        </div>
+
+        <div class="tool-card">
+            <div class="form-group">
+                <label>What are you studying?</label>
+                <input type="text" id="subject" placeholder="E.g., Math, Biology, Programming, Language...">
+            </div>
+
+            <div class="form-group">
+                <label>How much time do you have?</label>
+                <div class="quick-options">
+                    <button class="quick-option" onclick="setTime('1 hour')">1 hour</button>
+                    <button class="quick-option selected" onclick="setTime('2 hours')">2 hours</button>
+                    <button class="quick-option" onclick="setTime('3 hours')">3 hours</button>
+                    <button class="quick-option" onclick="setTime('4+ hours')">4+ hours</button>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>What's your goal?</label>
+                <div class="quick-options">
+                    <button class="quick-option" onclick="setGoal('exam prep')">Exam prep</button>
+                    <button class="quick-option" onclick="setGoal('learn new topic')">Learn new topic</button>
+                    <button class="quick-option" onclick="setGoal('review material')">Review material</button>
+                    <button class="quick-option" onclick="setGoal('homework')">Homework</button>
+                </div>
+            </div>
+
+            <button class="submit-btn" id="submitBtn" onclick="createPlan()">
+                <span id="btnText">📝 Create My Plan</span>
+                <div class="spinner" id="spinner" style="display: none;"></div>
+            </button>
+            <div class="error-message" id="errorMsg"></div>
+        </div>
+
+        <div class="result-section" id="resultSection">
+            <div class="result-card" style="border-left-color: #4facfe;">
+                <div class="result-header">
+                    <h3>📅 Your Study Plan</h3>
+                    <div class="result-actions">
+                        <button class="action-btn" onclick="copyResult()">📋 Copy</button>
+                        <button class="action-btn" onclick="saveResult()">💾 Save</button>
+                    </div>
+                </div>
+                <div class="result-content" id="resultContent"></div>
+            </div>
+        </div>
+
+        <div class="related-tools">
+            <h3>Related Tools</h3>
+            <div class="related-grid">
+                <a href="productivity-boost.html" class="related-card"><span class="icon">⚡</span><h4>Productivity Boost</h4></a>
+                <a href="mood-fixer.html" class="related-card"><span class="icon">😊</span><h4>Mood Fixer</h4></a>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../js/notifications.js"></script>
+    <script src="../../js/ai-tools-core.js"></script>
+    <script>
+        const TOOL_NAME = 'Study Planner';
+        const SYSTEM_PROMPT = `You are a study planning expert. Create detailed, time-blocked study plans using the Pomodoro technique (25 min work, 5 min break). Include specific activities for each block. Add study tips relevant to the subject. Make it practical and achievable.`;
+        trackToolUsage(TOOL_NAME, window.location.href);
+
+        let studyTime = '2 hours';
+        let studyGoal = '';
+
+        function setTime(t) { studyTime = t; updateSelection(event.target, '.form-group:nth-child(2) .quick-options'); }
+        function setGoal(g) { studyGoal = g; updateSelection(event.target, '.form-group:nth-child(3) .quick-options'); }
+        function updateSelection(el, parent) {
+            document.querySelectorAll(parent + ' .quick-option').forEach(b => b.classList.remove('selected'));
+            el.classList.add('selected');
+        }
+
+        async function createPlan() {
+            const subject = document.getElementById('subject').value.trim();
+            if (!subject) { showError('Please enter what you\'re studying'); return; }
+
+            const message = `Create a study plan for ${subject}. Time available: ${studyTime}. Goal: ${studyGoal || 'general study'}.`;
+            setLoading(true); hideError();
+            try {
+                const response = await callAI(SYSTEM_PROMPT, message);
+                showResult(response);
+            } catch (error) { showError('Something went wrong. Please try again.'); }
+            finally { setLoading(false); }
+        }
+
+        function showResult(text) {
+            document.getElementById('resultContent').textContent = text;
+            document.getElementById('resultSection').classList.add('show');
+            document.getElementById('resultSection').scrollIntoView({ behavior: 'smooth' });
+        }
+        function setLoading(l) {
+            document.getElementById('submitBtn').disabled = l;
+            document.getElementById('btnText').style.display = l ? 'none' : 'inline';
+            document.getElementById('spinner').style.display = l ? 'block' : 'none';
+        }
+        function showError(m) { const e = document.getElementById('errorMsg'); e.textContent = m; e.classList.add('show'); }
+        function hideError() { document.getElementById('errorMsg').classList.remove('show'); }
+        function copyResult() { copyToClipboard(document.getElementById('resultContent').textContent); }
+        function saveResult() { saveToHistory(TOOL_NAME, document.getElementById('subject').value, document.getElementById('resultContent').textContent); }
+    </script>
+</body>
+</html>

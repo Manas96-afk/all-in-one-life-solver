@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact All-in-One Life Problem Solver. We're here to help you improve your life. Reach out anytime.">
+    <title>Contact Us - All-in-One Life Problem Solver</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/contact.css">
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="../index.html" class="logo">
+                <span class="logo-icon">🧩</span>
+                <span class="logo-text">Life Problem Solver</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="ai-tools.html">Tools</a></li>
+                <li><a href="guides.html">Guides</a></li>
+                <li><a href="about-new.html">About</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Header -->
+    <section class="contact-hero">
+        <div class="container">
+            <div class="contact-hero-content">
+                <div class="contact-hero-icon">📧</div>
+                <h1>Contact Us</h1>
+                <p>We're here to help you improve your life. Reach out anytime.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Methods Section -->
+    <section class="contact-methods">
+        <div class="container">
+            <div class="methods-grid">
+                <!-- Email Card -->
+                <div class="method-card">
+                    <div class="method-icon">✉️</div>
+                    <h3>Email</h3>
+                    <p class="method-email">support@lifeproblemsolver.com</p>
+                    <button class="copy-btn" onclick="copyEmail('support@lifeproblemsolver.com', this)">
+                        📋 Copy Email
+                    </button>
+                </div>
+
+                <!-- Business Queries Card -->
+                <div class="method-card">
+                    <div class="method-icon">💼</div>
+                    <h3>Business & Partnerships</h3>
+                    <p class="method-email">business@lifeproblemsolver.com</p>
+                    <button class="copy-btn" onclick="copyEmail('business@lifeproblemsolver.com', this)">
+                        📋 Copy Email
+                    </button>
+                </div>
+
+                <!-- Social Media Card -->
+                <div class="method-card">
+                    <div class="method-icon">🌐</div>
+                    <h3>Follow Us</h3>
+                    <p style="color: #718096; margin-bottom: 15px;">Stay connected on social media</p>
+                    <div class="social-links-contact">
+                        <a href="#" class="social-link" aria-label="Facebook">📘</a>
+                        <a href="#" class="social-link" aria-label="Twitter">🐦</a>
+                        <a href="#" class="social-link" aria-label="Instagram">📷</a>
+                        <a href="#" class="social-link" aria-label="LinkedIn">💼</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-form-section">
+        <div class="container">
+            <div class="form-container">
+                <div class="form-header">
+                    <h2>Send Us a Message</h2>
+                    <p>Fill out the form below and we'll get back to you as soon as possible</p>
+                </div>
+
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Your Name *</label>
+                        <input 
+                            type="text" 
+                            id="name" 
+                            name="name" 
+                            class="form-input" 
+                            placeholder="John Doe"
+                            required
+                        >
+                        <span class="error-message" id="nameError">Please enter your name</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" class="form-label">Your Email *</label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            class="form-input" 
+                            placeholder="john@example.com"
+                            required
+                        >
+                        <span class="error-message" id="emailError">Please enter a valid email</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject" class="form-label">Subject *</label>
+                        <input 
+                            type="text" 
+                            id="subject" 
+                            name="subject" 
+                            class="form-input" 
+                            placeholder="How can we help you?"
+                            required
+                        >
+                        <span class="error-message" id="subjectError">Please enter a subject</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message" class="form-label">Message *</label>
+                        <textarea 
+                            id="message" 
+                            name="message" 
+                            class="form-textarea" 
+                            placeholder="Tell us more about your inquiry..."
+                            required
+                        ></textarea>
+                        <span class="error-message" id="messageError">Please enter your message</span>
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        Send Message
+                    </button>
+                </form>
+
+                <div class="success-message" id="successMessage">
+                    <div class="success-message-icon">✅</div>
+                    <p>Your message has been sent. We'll get back to you soon!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="faq-header">
+                <h2>Frequently Asked Questions</h2>
+                <p>Quick answers to common questions</p>
+            </div>
+
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>How quickly do you reply?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We typically respond to all inquiries within 24-48 hours during business days. For urgent matters, please mark your subject line with "URGENT" and we'll prioritize your message.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Can I request a new guide or tool?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Absolutely! We love hearing from our community. Send us your suggestions through the contact form above, and we'll consider them for future updates. Popular requests are prioritized.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Do you offer personalized advice?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>While our tools and guides provide general advice, we don't offer one-on-one personalized consulting. However, our AI-powered tools are designed to give you customized recommendations based on your specific inputs.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Is this service free?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes! All our tools and guides are completely free to use. We believe everyone should have access to resources that help them solve life's challenges. No hidden fees, no subscriptions required.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>How do I report a bug or technical issue?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Please use the contact form above and select "Technical Issue" in your subject line. Include details about the problem, what browser you're using, and any error messages you see. Screenshots are helpful too!</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Can I partner with you or advertise on your site?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We're open to partnerships that align with our mission. Please reach out to business@lifeproblemsolver.com with details about your proposal, and our team will review it.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section class="location-section">
+        <div class="container">
+            <div class="location-container">
+                <h2>Our Location</h2>
+                <div class="location-placeholder">
+                    <div class="location-icon">📍</div>
+                    <p>Remote-first company serving users worldwide</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About Us</h3>
+                    <p>Your all-in-one solution for life's challenges using AI-powered tools.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="ai-tools.html">Tools</a></li>
+                        <li><a href="guides.html">Guides</a></li>
+                        <li><a href="about-new.html">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">📘</a>
+                        <a href="#" aria-label="Twitter">🐦</a>
+                        <a href="#" aria-label="Instagram">📷</a>
+                        <a href="#" aria-label="LinkedIn">💼</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 All-in-One Life Problem Solver. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/contact.js"></script>
+</body>
+</html>

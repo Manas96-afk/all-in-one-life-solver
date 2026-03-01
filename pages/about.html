@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>About Us | All-in-One Life Problem Solver</title>
+    <meta name="title" content="About Us | All-in-One Life Problem Solver">
+    <meta name="description" content="Learn about our mission to make life easier with AI tools, life hacks, and mini guides. Meet Solvee, your friendly AI assistant.">
+    <meta name="keywords" content="about us, life solver, AI assistant, Solvee, mission, contact">
+    <meta name="author" content="Life Solver">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://lifesolver.com/about">
+    <meta property="og:title" content="About Us | All-in-One Life Problem Solver">
+    <meta property="og:description" content="Learn about our mission to make life easier with AI tools, life hacks, and mini guides.">
+    
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#87CEEB">
+    
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        /* About Page Specific Styles */
+        .about-page {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            min-height: 100vh;
+        }
+        
+        /* Hero Section */
+        .about-hero {
+            background: linear-gradient(135deg, #87CEEB 0%, #B19CD9 100%);
+            padding: 80px 20px 60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .about-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+        
+        .about-hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .solvee-avatar {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            animation: pulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+        
+        .about-hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 1rem;
+        }
+        
+        .about-hero p {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.95);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* Section Styles */
+        .about-section {
+            padding: 60px 20px;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        
+        .about-section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .section-card {
+            background: white;
+            border-radius: 24px;
+            padding: 3rem;
+            box-shadow: 0 8px 25px rgba(135, 206, 235, 0.15);
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #1E293B;
+            margin-bottom: 1rem;
+        }
+        
+        .section-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #64748B;
+        }
+        
+        /* Solvee Section */
+        .solvee-card {
+            background: linear-gradient(135deg, #E0F6FF 0%, #E6E6FA 100%);
+            border-radius: 24px;
+            padding: 3rem;
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(135, 206, 235, 0.15);
+        }
+        
+        .solvee-card .solvee-avatar {
+            font-size: 5rem;
+            margin-bottom: 1.5rem;
+            display: inline-block;
+        }
+        
+        .solvee-card h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #1E293B;
+            margin-bottom: 1rem;
+        }
+        
+        .solvee-card p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #475569;
+        }
+        
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .feature-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2.5rem 2rem;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(135, 206, 235, 0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(135, 206, 235, 0.2);
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .feature-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #1E293B;
+            margin-bottom: 0.5rem;
+        }
+        
+        .feature-subtitle {
+            font-size: 1rem;
+            color: #64748B;
+            line-height: 1.6;
+        }
+        
+        /* Contact Form */
+        .contact-form-section {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .contact-form {
+            background: white;
+            border-radius: 24px;
+            padding: 3rem;
+            box-shadow: 0 8px 25px rgba(135, 206, 235, 0.15);
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+        
+        .form-label {
+            display: block;
+            font-weight: 600;
+            color: #1E293B;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+        
+        .form-input,
+        .form-textarea {
+            width: 100%;
+            padding: 0.875rem 1rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .form-input:focus,
+        .form-textarea:focus {
+            outline: none;
+            border-color: #87CEEB;
+            box-shadow: 0 0 0 3px rgba(135, 206, 235, 0.1);
+        }
+        
+        .form-textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        .submit-btn {
+            width: 100%;
+            padding: 1rem;
+            background: linear-gradient(135deg, #87CEEB 0%, #B19CD9 100%);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(135, 206, 235, 0.3);
+        }
+        
+        .submit-btn:active {
+            transform: translateY(0);
+        }
+        
+        .success-message {
+            display: none;
+            background: #10b981;
+            color: white;
+            padding: 1rem;
+            border-radius: 12px;
+            text-align: center;
+            margin-top: 1rem;
+            font-weight: 600;
+        }
+        
+        /* Social Links */
+        .social-section {
+            text-align: center;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        .social-links-grid {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .social-link {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: #87CEEB;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(135, 206, 235, 0.15);
+            transition: all 0.3s ease;
+        }
+        
+        .social-link:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(135, 206, 235, 0.25);
+            background: linear-gradient(135deg, #87CEEB 0%, #B19CD9 100%);
+            color: white;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .about-hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .about-hero p {
+                font-size: 1rem;
+            }
+            
+            .section-card,
+            .solvee-card,
+            .contact-form {
+                padding: 2rem;
+            }
+            
+            .section-title {
+                font-size: 1.75rem;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .about-section {
+                padding: 40px 20px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .about-hero {
+                padding: 60px 20px 40px;
+            }
+            
+            .about-hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .solvee-avatar {
+                font-size: 3rem;
+            }
+            
+            .solvee-card .solvee-avatar {
+                font-size: 4rem;
+            }
+            
+            .section-card,
+            .solvee-card,
+            .contact-form {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body class="about-page">
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-lightbulb"></i>
+                <span>Life Solver</span>
+            </div>
+            <nav class="nav">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="category.html" class="nav-link">Categories</a>
+                <a href="request.html" class="nav-link">Request Tool</a>
+                <a href="about.html" class="nav-link active">About</a>
+            </nav>
+            <button class="mobile-menu-btn" id="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="nav-mobile" id="nav-mobile">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="category.html" class="nav-link">Categories</a>
+                <a href="request.html" class="nav-link">Request Tool</a>
+                <a href="about.html" class="nav-link active">About</a>
+            </nav>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="about-hero">
+        <div class="about-hero-content">
+            <div class="solvee-avatar">🤖💬</div>
+            <h1>About Us ✨</h1>
+            <p>The story behind Life Problem Solver and our mission to help people every day.</p>
+        </div>
+    </section>
+
+    <!-- Our Mission Section -->
+    <section class="about-section" id="mission-section">
+        <div class="container">
+            <div class="section-card">
+                <h2 class="section-title">Why We Built This</h2>
+                <p class="section-text">
+                    We created this platform to make life easier — one tool, one hack, one guide at a time. 
+                    Whether you're struggling with studies, relationships, fitness, career, or mental clarity, 
+                    we want to give you quick, meaningful solutions anytime you need.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meet Solvee Section -->
+    <section class="about-section" id="solvee-section">
+        <div class="container">
+            <div class="solvee-card">
+                <div class="solvee-avatar">🤖</div>
+                <h2>Say Hello to Solvee 🤖❤️</h2>
+                <p>
+                    Solvee is your tiny-but-smart life helper. She listens, understands your keywords, 
+                    and gives small boosts when life feels heavy. She's growing every day — soon she'll 
+                    become deeply personal, smart, and even more helpful.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Platform Features Section -->
+    <section class="about-section" id="features-section">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center; margin-bottom: 3rem;">Platform Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🧰</div>
+                    <h3 class="feature-title">AI Tools</h3>
+                    <p class="feature-subtitle">Tiny tools that fix daily problems instantly.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💡</div>
+                    <h3 class="feature-title">Life Hacks</h3>
+                    <p class="feature-subtitle">Quick tricks for a smoother, smarter life.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📘</div>
+                    <h3 class="feature-title">Mini Guides</h3>
+                    <p class="feature-subtitle">Short, actionable learning for growth.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="about-section" id="contact-section">
+        <div class="container">
+            <div class="contact-form-section">
+                <h2 class="section-title" style="text-align: center; margin-bottom: 2rem;">Get In Touch</h2>
+                <form class="contact-form" id="contact-form">
+                    <div class="form-group">
+                        <label class="form-label" for="contact-name">Name</label>
+                        <input type="text" id="contact-name" name="name" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="contact-email">Email</label>
+                        <input type="email" id="contact-email" name="email" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="contact-subject">Subject</label>
+                        <input type="text" id="contact-subject" name="subject" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="contact-message">Message</label>
+                        <textarea id="contact-message" name="message" class="form-textarea" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">
+                        <span>Send Message</span>
+                        <span>✉️</span>
+                    </button>
+                    <div class="success-message" id="success-message">
+                        Thank you! We'll get back to you soon. 💫
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Links Section -->
+    <section class="about-section" id="social-section">
+        <div class="container">
+            <div class="social-section">
+                <h2 class="section-title">Connect With Us</h2>
+                <p class="section-text" style="margin-bottom: 2rem;">Follow us on social media for updates and tips</p>
+                <div class="social-links-grid">
+                    <a href="https://instagram.com" target="_blank" class="social-link" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://twitter.com" target="_blank" class="social-link" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="mailto:hello@lifesolver.com" class="social-link" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://linkedin.com" target="_blank" class="social-link" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background: white; padding: 2rem 0; text-align: center; margin-top: 4rem; border-top: 1px solid #e2e8f0;">
+        <div class="container">
+            <p style="color: #64748B; margin-bottom: 1rem;">
+                © 2025 All-in-One Life Problem Solver. Made with ❤️ to make your life easier.
+            </p>
+            <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
+                <a href="../index.html" style="color: #64748B; text-decoration: none;">Home</a>
+                <a href="category.html" style="color: #64748B; text-decoration: none;">Categories</a>
+                <a href="request.html" style="color: #64748B; text-decoration: none;">Request Tool</a>
+                <a href="about.html" style="color: #64748B; text-decoration: none;">About</a>
+                <a href="dashboard.html" style="color: #64748B; text-decoration: none;">Admin</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Solvee Chat Widget -->
+    <div class="chat-widget" id="chat-widget">
+        <!-- Chat Button -->
+        <div class="chat-button" id="chat-button">
+            <span class="chat-icon">💬</span>
+            <div class="chat-pulse"></div>
+        </div>
+
+        <!-- Chat Window -->
+        <div class="chat-window" id="chat-window">
+            <div class="chat-header">
+                <div class="chat-title">
+                    <span class="solvee-avatar">🤖</span>
+                    <div class="title-text">
+                        <h4>Solvee – Your Life Helper</h4>
+                        <span class="status">🤍 Always here to help</span>
+                    </div>
+                </div>
+                <button class="chat-close" id="chat-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <div class="chat-messages" id="chat-messages">
+                <div class="message solvee-message">
+                    <div class="message-avatar">🤖</div>
+                    <div class="message-content">
+                        <p>Hi there! I'm Solvee, your friendly life helper. Ask me about study tips, relationships, fitness, career advice, or anything else! 💫</p>
+                        <span class="message-time">Just now</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="typing-indicator" id="typing-indicator" style="display: none;">
+                <div class="typing-avatar">🤖</div>
+                <div class="typing-content">
+                    <div class="typing-dots">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <span class="typing-text">Solvee is thinking...</span>
+                </div>
+            </div>
+
+            <div class="chat-input-area">
+                <div class="chat-input-container">
+                    <input type="text" id="chat-input" placeholder="Ask me anything..." maxlength="200">
+                    <button class="send-button" id="send-button">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <link rel="stylesheet" href="../css/chatbot.css">
+    <script src="../js/chatbot.js"></script>
+    <script src="../js/main.js"></script>
+    <script>
+        // About Page Specific JavaScript
+        
+        // Scroll Animation Observer
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all sections
+        document.querySelectorAll('.about-section').forEach(section => {
+            observer.observe(section);
+        });
+
+        // Contact Form Handler
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = {
+                name: document.getElementById('contact-name').value.trim(),
+                email: document.getElementById('contact-email').value.trim(),
+                subject: document.getElementById('contact-subject').value.trim(),
+                message: document.getElementById('contact-message').value.trim(),
+                timestamp: Date.now(),
+                date: new Date().toISOString().split('T')[0]
+            };
+            
+            // Validate
+            if (!formData.name || !formData.email || !formData.subject || !formData.message) {
+                alert('Please fill in all fields');
+                return;
+            }
+            
+            // Email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(formData.email)) {
+                alert('Please enter a valid email address');
+                return;
+            }
+            
+            // Save to localStorage
+            try {
+                const existingMessages = JSON.parse(localStorage.getItem('contactMessages') || '[]');
+                existingMessages.push(formData);
+                localStorage.setItem('contactMessages', JSON.stringify(existingMessages));
+                
+                // Show success message
+                document.getElementById('success-message').style.display = 'block';
+                
+                // Reset form
+                this.reset();
+                
+                // Hide success message after 5 seconds
+                setTimeout(() => {
+                    document.getElementById('success-message').style.display = 'none';
+                }, 5000);
+                
+                console.log('Contact message saved:', formData);
+            } catch (error) {
+                console.error('Error saving contact message:', error);
+                alert('Sorry, there was an error sending your message. Please try again.');
+            }
+        });
+
+        // Feature cards hover effect
+        document.querySelectorAll('.feature-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.background = 'linear-gradient(135deg, #E0F6FF 0%, #E6E6FA 100%)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.background = 'white';
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Money Mentor - Simple Savings Tips | Life Solver</title>
+    <meta name="description" content="Get personalized money-saving tips and financial advice. Simple strategies for better finances.">
+    <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/brand-components.css">
+    <link rel="stylesheet" href="../../css/mini-tool.css">
+    <link rel="stylesheet" href="../../css/notifications.css">
+</head>
+<body>
+    <nav class="ls-navbar">
+        <div class="ls-container">
+            <a href="../../index.html" class="ls-nav-logo"><span>💡</span><span>Life Solver</span></a>
+            <div class="ls-nav-links">
+                <a href="../../index.html">Home</a>
+                <a href="../ai-tools.html">Tools</a>
+                <a href="../guides-library.html">Guides</a>
+                <a href="../dashboard.html">Dashboard</a>
+            </div>
+            <button class="ls-mobile-menu" onclick="toggleMobileMenu()">☰</button>
+        </div>
+    </nav>
+
+    <div class="tool-container">
+        <div class="tool-header">
+            <span class="tool-icon">💰</span>
+            <h1>Money Mentor</h1>
+            <p>Simple savings tips and financial guidance</p>
+        </div>
+
+        <div class="tool-card">
+            <div class="form-group">
+                <label>What's your money goal?</label>
+                <div class="quick-options">
+                    <button class="quick-option" onclick="setGoal('save more money')">Save more</button>
+                    <button class="quick-option" onclick="setGoal('create a budget')">Create budget</button>
+                    <button class="quick-option" onclick="setGoal('reduce spending')">Spend less</button>
+                    <button class="quick-option" onclick="setGoal('pay off debt')">Pay off debt</button>
+                    <button class="quick-option" onclick="setGoal('start investing')">Start investing</button>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Tell me more about your situation (optional)</label>
+                <textarea id="userInput" placeholder="E.g., I'm a student, I have irregular income, I want to save for a vacation..."></textarea>
+            </div>
+
+            <button class="submit-btn" id="submitBtn" onclick="getMoneyTips()" style="background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);">
+                <span id="btnText">💰 Get Money Tips</span>
+                <div class="spinner" id="spinner" style="display: none;"></div>
+            </button>
+            <div class="error-message" id="errorMsg"></div>
+        </div>
+
+        <div class="result-section" id="resultSection">
+            <div class="result-card" style="border-left-color: #48bb78;">
+                <div class="result-header">
+                    <h3>💵 Your Money Tips</h3>
+                    <div class="result-actions">
+                        <button class="action-btn" onclick="copyResult()">📋 Copy</button>
+                        <button class="action-btn" onclick="saveResult()">💾 Save</button>
+                    </div>
+                </div>
+                <div class="result-content" id="resultContent"></div>
+            </div>
+        </div>
+
+        <div class="related-tools">
+            <h3>Related Tools</h3>
+            <div class="related-grid">
+                <a href="career-coach.html" class="related-card"><span class="icon">💼</span><h4>Career Coach</h4></a>
+                <a href="productivity-boost.html" class="related-card"><span class="icon">⚡</span><h4>Productivity Boost</h4></a>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../js/notifications.js"></script>
+    <script src="../../js/ai-tools-core.js"></script>
+    <script>
+        const TOOL_NAME = 'Money Mentor';
+        const SYSTEM_PROMPT = `You are a friendly financial advisor giving simple, practical money tips. Focus on actionable advice that anyone can follow. Include specific strategies and quick wins. Be encouraging and non-judgmental. Avoid complex financial jargon.`;
+        trackToolUsage(TOOL_NAME, window.location.href);
+
+        let moneyGoal = '';
+
+        function setGoal(goal) {
+            moneyGoal = goal;
+            document.querySelectorAll('.quick-option').forEach(btn => btn.classList.remove('selected'));
+            event.target.classList.add('selected');
+        }
+
+        async function getMoneyTips() {
+            let message = moneyGoal ? `I want to ${moneyGoal}.` : 'Give me general money-saving tips.';
+            const extra = document.getElementById('userInput').value.trim();
+            if (extra) message += ` ${extra}`;
+
+            setLoading(true); hideError();
+            try {
+                const response = await callAI(SYSTEM_PROMPT, message);
+                showResult(response);
+            } catch (error) { showError('Something went wrong. Please try again.'); }
+            finally { setLoading(false); }
+        }
+
+        function showResult(text) {
+            document.getElementById('resultContent').textContent = text;
+            document.getElementById('resultSection').classList.add('show');
+            document.getElementById('resultSection').scrollIntoView({ behavior: 'smooth' });
+        }
+        function setLoading(l) {
+            document.getElementById('submitBtn').disabled = l;
+            document.getElementById('btnText').style.display = l ? 'none' : 'inline';
+            document.getElementById('spinner').style.display = l ? 'block' : 'none';
+        }
+        function showError(m) { const e = document.getElementById('errorMsg'); e.textContent = m; e.classList.add('show'); }
+        function hideError() { document.getElementById('errorMsg').classList.remove('show'); }
+        function copyResult() { copyToClipboard(document.getElementById('resultContent').textContent); }
+        function saveResult() { saveToHistory(TOOL_NAME, moneyGoal, document.getElementById('resultContent').textContent); }
+    </script>
+</body>
+</html>

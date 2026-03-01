@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Category | All-in-One Life Problem Solver</title>
+    <meta name="description" id="page-description" content="Find tools and guides to solve your problems.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/category-template.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-lightbulb"></i>
+                <span>Life Solver</span>
+            </div>
+            <div class="nav-links">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="category-template.html" class="nav-link active">Categories</a>
+                <a href="ai-tools.html" class="nav-link">AI Tools</a>
+                <a href="guides.html" class="nav-link">Guides</a>
+            </div>
+            <button class="mobile-menu-btn" id="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Dynamic Header Section -->
+    <section class="category-header">
+        <div class="container">
+            <div class="header-grid">
+                <div class="header-content">
+                    <h1 class="category-title" id="category-title">Career Solutions</h1>
+                    <p class="category-subtitle" id="category-subtitle">Tools and guides to help you grow professionally.</p>
+                </div>
+                <div class="header-illustration">
+                    <div class="illustration-icon" id="category-icon">💼</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sub-Category Filters -->
+    <section class="subcategory-filters" id="subcategory-section">
+        <div class="container">
+            <div class="filter-chips" id="filter-chips">
+                <!-- Dynamically loaded based on category -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Tools Section -->
+    <section class="featured-tools-section">
+        <div class="container">
+            <h2 class="section-title">Featured Tools</h2>
+            <div class="tools-grid" id="tools-grid">
+                <!-- Dynamically loaded tools -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Guides Section -->
+    <section class="featured-guides-section">
+        <div class="container">
+            <h2 class="section-title">Featured Guides</h2>
+            <div class="guides-grid" id="guides-grid">
+                <!-- Dynamically loaded guides -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Recommended Carousel (Optional) -->
+    <section class="recommended-section">
+        <div class="container">
+            <h2 class="section-title">You Might Also Like</h2>
+            <div class="carousel-container">
+                <button class="carousel-btn prev-btn" id="prev-btn">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="carousel-track" id="carousel-track">
+                    <!-- Dynamically loaded recommendations -->
+                </div>
+                <button class="carousel-btn next-btn" id="next-btn">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Want solutions for another area of your life?</h2>
+                <div class="cta-buttons">
+                    <a href="ai-tools.html" class="btn-primary">See All Tools</a>
+                    <a href="guides.html" class="btn-secondary">View All Guides</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="about-new.html">About</a>
+                    <a href="request.html">Contact</a>
+                    <a href="#">Privacy</a>
+                    <a href="#">Terms</a>
+                </div>
+                <div class="footer-social">
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <p class="footer-copyright">© 2025 Life Solver. Made with ❤️ to make your life easier.</p>
+        </div>
+    </footer>
+
+    <script src="../js/category-template.js"></script>
+</body>
+</html>

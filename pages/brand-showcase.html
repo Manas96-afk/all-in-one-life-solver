@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brand Components Showcase - Life Solver</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/brand-components.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: var(--font-family);
+            background: var(--gradient-soft-bg);
+            padding: var(--space-xl) 0;
+        }
+        
+        .showcase-header {
+            text-align: center;
+            margin-bottom: var(--space-3xl);
+            padding: var(--space-2xl);
+            background: var(--gradient-primary);
+            color: white;
+        }
+        
+        .showcase-header h1 {
+            font-size: 3rem;
+            margin-bottom: var(--space-md);
+        }
+        
+        .showcase-section {
+            background: white;
+            padding: var(--space-2xl);
+            margin-bottom: var(--space-xl);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .showcase-section h2 {
+            color: var(--dark-text);
+            margin-bottom: var(--space-xl);
+            padding-bottom: var(--space-md);
+            border-bottom: 2px solid var(--border-gray);
+        }
+        
+        .component-group {
+            margin-bottom: var(--space-2xl);
+        }
+        
+        .component-group h3 {
+            color: var(--body-text);
+            margin-bottom: var(--space-lg);
+        }
+        
+        .component-demo {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-md);
+            margin-bottom: var(--space-lg);
+        }
+        
+        .color-swatch {
+            width: 120px;
+            height: 120px;
+            border-radius: var(--radius-md);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: var(--font-weight-semibold);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .color-code {
+            font-size: 0.75rem;
+            margin-top: var(--space-xs);
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <div class="showcase-header">
+        <h1>💡 Life Solver</h1>
+        <p>Brand Components Showcase</p>
+    </div>
+
+    <div class="ls-container">
+        <!-- Colors Section -->
+        <section class="showcase-section">
+            <h2>🎨 Color Palette</h2>
+            
+            <div class="component-group">
+                <h3>Primary Colors</h3>
+                <div class="component-demo">
+                    <div class="color-swatch" style="background: #667eea;">
+                        Primary Blue
+                        <span class="color-code">#667eea</span>
+                    </div>
+                    <div class="color-swatch" style="background: #764ba2;">
+                        Primary Purple
+                        <span class="color-code">#764ba2</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="component-group">
+                <h3>Secondary Colors</h3>
+                <div class="component-demo">
+                    <div class="color-swatch" style="background: #48bb78;">
+                        Success
+                        <span class="color-code">#48bb78</span>
+                    </div>
+                    <div class="color-swatch" style="background: #ed8936;">
+                        Warning
+                        <span class="color-code">#ed8936</span>
+                    </div>
+                    <div class="color-swatch" style="background: #fc8181;">
+                        Error
+                        <span class="color-code">#fc8181</span>
+                    </div>
+                    <div class="color-swatch" style="background: #4facfe;">
+                        Info
+                        <span class="color-code">#4facfe</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Buttons Section -->
+        <section class="showcase-section">
+            <h2>🔘 Buttons</h2>
+            
+            <div class="component-group">
+                <h3>Button Variants</h3>
+                <div class="component-demo">
+                    <button class="ls-btn ls-btn-primary">Primary Button</button>
+                    <button class="ls-btn ls-btn-secondary">Secondary Button</button>
+                    <button class="ls-btn ls-btn-ghost">Ghost Button</button>
+                    <button class="ls-btn ls-btn-success">Success Button</button>
+                    <button class="ls-btn ls-btn-danger">Danger Button</button>
+                </div>
+            </div>
+            
+            <div class="component-group">
+                <h3>Button Sizes</h3>
+                <div class="component-demo">
+                    <button class="ls-btn ls-btn-primary ls-btn-sm">Small</button>
+                    <button class="ls-btn ls-btn-primary">Normal</button>
+                    <button class="ls-btn ls-btn-primary ls-btn-lg">Large</button>
+                </div>
+            </div>
+            
+            <div class="component-group">
+                <h3>Button States</h3>
+                <div class="component-demo">
+                    <button class="ls-btn ls-btn-primary">Normal</button>
+                    <button class="ls-btn ls-btn-primary" disabled>Disabled</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cards Section -->
+        <section class="showcase-section">
+            <h2>🃏 Cards</h2>
+            
+            <div class="ls-grid ls-grid-3">
+                <div class="ls-card">
+                    <div class="ls-card-header">
+                        <h3 class="ls-card-title">Standard Card</h3>
+                        <p class="ls-card-subtitle">This is a subtitle</p>
+                    </div>
+                    <div class="ls-card-body">
+                        <p>This is a standard card with hover effect. It elevates on hover.</p>
+                    </div>
+                    <div class="ls-card-footer">
+                        <button class="ls-btn ls-btn-primary ls-btn-sm">Action</button>
+                    </div>
+                </div>
+                
+                <div class="ls-tool-card">
+                    <span class="ls-tool-icon">💼</span>
+                    <h3 class="ls-card-title">Tool Card</h3>
+                    <p>Quick solutions & smart tools</p>
+                    <button class="ls-btn ls-btn-primary ls-btn-sm ls-mt-2">Open Tool</button>
+                </div>
+                
+                <div class="ls-card-featured">
+                    <h3 class="ls-card-title">Featured Card</h3>
+                    <p>This card uses the primary gradient and stands out from others.</p>
+                    <button class="ls-btn ls-btn-secondary ls-btn-sm ls-mt-2">Learn More</button>
+                </div>
+            </div>
+            
+            <div class="ls-mt-4">
+                <h3 class="ls-mb-2">Guide Card</h3>
+                <div class="ls-guide-card" style="max-width: 400px;">
+                    <div class="ls-guide-image">📚</div>
+                    <div class="ls-guide-content">
+                        <h3 class="ls-card-title">How to Study Smarter</h3>
+                        <p>Learn proven techniques to boost your learning efficiency in just 20 minutes.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="ls-mt-4">
+                <h3 class="ls-mb-2">Hack Tiles</h3>
+                <div class="ls-hack-tile">
+                    <h4>💡 Quick Tip</h4>
+                    <p>Use the Pomodoro technique: 25 minutes of focused work, 5 minutes break.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Inputs Section -->
+        <section class="showcase-section">
+            <h2>📝 Form Inputs</h2>
+            
+            <div class="component-group">
+                <h3>Text Input</h3>
+                <input type="text" class="ls-input" placeholder="Enter your text here">
+            </div>
+            
+            <div class="component-group">
+                <h3>Input with Icon</h3>
+                <div class="ls-input-group">
+                    <span class="ls-input-icon">🔍</span>
+                    <input type="text" class="ls-input" placeholder="Search...">
+                </div>
+            </div>
+            
+            <div class="component-group">
+                <h3>Textarea</h3>
+                <textarea class="ls-textarea" placeholder="Enter your message..."></textarea>
+            </div>
+            
+            <div class="component-group">
+                <h3>Select</h3>
+                <select class="ls-select">
+                    <option>Choose an option</option>
+                    <option>Option 1</option>
+                    <option>Option 2</option>
+                    <option>Option 3</option>
+                </select>
+            </div>
+        </section>
+
+        <!-- Badges & Alerts Section -->
+        <section class="showcase-section">
+            <h2>🏷️ Badges & Alerts</h2>
+            
+            <div class="component-group">
+                <h3>Badges</h3>
+                <div class="component-demo">
+                    <span class="ls-badge ls-badge-primary">Primary</span>
+                    <span class="ls-badge ls-badge-success">Success</span>
+                    <span class="ls-badge ls-badge-warning">Warning</span>
+                    <span class="ls-badge ls-badge-error">Error</span>
+                </div>
+            </div>
+            
+            <div class="component-group">
+                <h3>Alerts</h3>
+                <div class="ls-alert ls-alert-info">
+                    <strong>Info:</strong> This is an informational message.
+                </div>
+                <div class="ls-alert ls-alert-success">
+                    <strong>Success:</strong> Your action was completed successfully!
+                </div>
+                <div class="ls-alert ls-alert-warning">
+                    <strong>Warning:</strong> Please review this information carefully.
+                </div>
+                <div class="ls-alert ls-alert-error">
+                    <strong>Error:</strong> Something went wrong. Please try again.
+                </div>
+            </div>
+        </section>
+
+        <!-- Pagination Section -->
+        <section class="showcase-section">
+            <h2>📄 Pagination</h2>
+            
+            <div class="ls-pagination">
+                <button class="ls-page-item" disabled>←</button>
+                <a href="#" class="ls-page-item active">1</a>
+                <a href="#" class="ls-page-item">2</a>
+                <a href="#" class="ls-page-item">3</a>
+                <a href="#" class="ls-page-item">4</a>
+                <a href="#" class="ls-page-item">5</a>
+                <button class="ls-page-item">→</button>
+            </div>
+        </section>
+
+        <!-- Loading Spinner Section -->
+        <section class="showcase-section">
+            <h2>⏳ Loading Spinners</h2>
+            
+            <div class="component-demo">
+                <div class="ls-spinner ls-spinner-sm"></div>
+                <div class="ls-spinner"></div>
+                <div class="ls-spinner ls-spinner-lg"></div>
+            </div>
+        </section>
+
+        <!-- Grid System Section -->
+        <section class="showcase-section">
+            <h2>📐 Grid System</h2>
+            
+            <div class="component-group">
+                <h3>2 Column Grid</h3>
+                <div class="ls-grid ls-grid-2">
+                    <div class="ls-card">Column 1</div>
+                    <div class="ls-card">Column 2</div>
+                </div>
+            </div>
+            
+            <div class="component-group">
+                <h3>3 Column Grid</h3>
+                <div class="ls-grid ls-grid-3">
+                    <div class="ls-card">Column 1</div>
+                    <div class="ls-card">Column 2</div>
+                    <div class="ls-card">Column 3</div>
+                </div>
+            </div>
+            
+            <div class="component-group">
+                <h3>4 Column Grid</h3>
+                <div class="ls-grid ls-grid-4">
+                    <div class="ls-card">Column 1</div>
+                    <div class="ls-card">Column 2</div>
+                    <div class="ls-card">Column 3</div>
+                    <div class="ls-card">Column 4</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Typography Section -->
+        <section class="showcase-section">
+            <h2>✍️ Typography</h2>
+            
+            <h1>Heading 1 - 2.5rem</h1>
+            <h2>Heading 2 - 2rem</h2>
+            <h3>Heading 3 - 1.5rem</h3>
+            <h4>Heading 4 - 1.25rem</h4>
+            <p>Body text - 1rem. This is regular paragraph text with normal line height for comfortable reading.</p>
+            <p class="ls-text-light">Light text - 0.875rem. Used for captions and secondary information.</p>
+        </section>
+    </div>
+</body>
+</html>

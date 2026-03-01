@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tool Name - Life Problem Solver</title>
+    <meta name="description" content="Tool description">
+    <link rel="stylesheet" href="../css/tool-template.css">
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+</head>
+<body>
+    <!-- Tool Header -->
+    <header class="tool-header">
+        <div class="container">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <button class="back-btn" onclick="goBack()">
+                    <span class="back-icon">←</span>
+                    <span>Back</span>
+                </button>
+                <button class="back-btn" onclick="window.location.href='api-settings.html'" title="Configure AI Provider">
+                    <span>⚙️</span>
+                    <span id="providerStatus">Demo Mode</span>
+                </button>
+            </div>
+            <div class="tool-info">
+                <div class="tool-icon" id="toolIcon">🧭</div>
+                <div class="tool-text">
+                    <h1 class="tool-name" id="toolName">Life Advisor</h1>
+                    <p class="tool-desc" id="toolDesc">Get quick life suggestions powered by AI</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Tool Interface -->
+    <main class="tool-main">
+        <div class="container">
+            <div class="tool-container">
+                <!-- Input Section -->
+                <div class="input-section">
+                    <label for="userInput" class="input-label">What's on your mind?</label>
+                    <textarea 
+                        id="userInput" 
+                        class="input-box" 
+                        placeholder="Type your question or problem here..."
+                        rows="6"
+                    ></textarea>
+                    
+                    <!-- Quick Prompts -->
+                    <div class="quick-prompts" id="quickPrompts">
+                        <!-- Dynamic prompts will be inserted here -->
+                    </div>
+                    
+                    <button class="generate-btn" id="generateBtn">
+                        <span class="btn-icon">✨</span>
+                        <span class="btn-text">Generate</span>
+                    </button>
+                </div>
+
+                <!-- Output Section -->
+                <div class="output-section" id="outputSection" style="display: none;">
+                    <div class="output-header">
+                        <h3>Result</h3>
+                        <button class="copy-btn" id="copyBtn" title="Copy to clipboard">
+                            <span>📋</span>
+                        </button>
+                    </div>
+                    <div class="output-box" id="outputBox">
+                        <!-- AI response will appear here -->
+                    </div>
+                    <button class="new-query-btn" id="newQueryBtn">
+                        <span>🔄</span>
+                        <span>New Query</span>
+                    </button>
+                </div>
+
+                <!-- History Section -->
+                <div class="history-section" id="historySection" style="display: none;">
+                    <div class="history-header">
+                        <h3>Recent History</h3>
+                        <button class="clear-history-btn" id="clearHistoryBtn">Clear All</button>
+                    </div>
+                    <div class="history-list" id="historyList">
+                        <!-- History items will be inserted here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="tool-footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="../index.html">← Home</a>
+                <a href="../index.html#quick-tools">All Tools</a>
+                <a href="../pages/contact.html">Contact</a>
+            </div>
+            <p class="footer-text">© 2024 Life Problem Solver</p>
+        </div>
+    </footer>
+
+    <script src="../js/api-config.js"></script>
+    <script src="../js/tool-template.js"></script>
+</body>
+</html>

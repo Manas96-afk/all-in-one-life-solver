@@ -1,0 +1,314 @@
+{
+  "categories": [
+    { "id": "productivity", "name": "Productivity", "icon": "⚡" },
+    { "id": "study", "name": "Study", "icon": "📚" },
+    { "id": "career", "name": "Career", "icon": "💼" },
+    { "id": "fitness", "name": "Fitness", "icon": "💪" },
+    { "id": "mental", "name": "Mental Health", "icon": "🧘" },
+    { "id": "relationships", "name": "Relationships", "icon": "❤️" },
+    { "id": "finance", "name": "Finance", "icon": "💰" },
+    { "id": "health", "name": "Health", "icon": "🏥" }
+  ],
+  "guides": [
+    {
+      "id": "study-smarter",
+      "title": "How to Study Smarter in 20 Minutes",
+      "description": "Proven techniques to boost your learning efficiency and retain more information.",
+      "category": "study",
+      "readTime": "5 min",
+      "difficulty": "beginner",
+      "image": "📖",
+      "featured": true,
+      "sections": [
+        { "title": "Active Recall", "content": "Instead of passively reading, close your book and try to recall what you just learned." },
+        { "title": "Spaced Repetition", "content": "Review material at increasing intervals: 1 day, 3 days, 1 week, 2 weeks." },
+        { "title": "Pomodoro Technique", "content": "Study for 25 minutes, take a 5-minute break. Repeat 4 times, then take a longer break." }
+      ]
+    },
+    {
+      "id": "fix-overthinking",
+      "title": "How to Fix Overthinking in Daily Life",
+      "description": "Simple strategies to calm your mind and stop the endless thought loops.",
+      "category": "mental",
+      "readTime": "6 min",
+      "difficulty": "beginner",
+      "image": "🧠",
+      "featured": true,
+      "sections": [
+        { "title": "Recognize the Pattern", "content": "Notice when you're overthinking. Awareness is the first step to change." },
+        { "title": "Set a Worry Time", "content": "Schedule 15 minutes daily to worry. Outside this time, postpone worries." },
+        { "title": "Ground Yourself", "content": "Use the 5-4-3-2-1 technique: 5 things you see, 4 hear, 3 feel, 2 smell, 1 taste." }
+      ]
+    },
+    {
+      "id": "impress-interviews",
+      "title": "How to Impress in Job Interviews",
+      "description": "Stand out from other candidates and land your dream job with these proven tips.",
+      "category": "career",
+      "readTime": "8 min",
+      "difficulty": "intermediate",
+      "image": "💼",
+      "featured": true,
+      "sections": [
+        { "title": "Research the Company", "content": "Know their mission, recent news, and culture. Reference specifics in your answers." },
+        { "title": "Use STAR Method", "content": "Structure answers: Situation, Task, Action, Result. Be specific with examples." },
+        { "title": "Ask Great Questions", "content": "Prepare thoughtful questions about the role, team, and company growth." }
+      ]
+    },
+    {
+      "id": "morning-routine",
+      "title": "Build a Morning Routine That Works",
+      "description": "Start your day with energy and focus using this customizable morning routine.",
+      "category": "productivity",
+      "readTime": "7 min",
+      "difficulty": "beginner",
+      "image": "🌅",
+      "featured": true,
+      "sections": [
+        { "title": "Wake Up Consistently", "content": "Set the same wake time daily, even weekends. Your body will adapt." },
+        { "title": "Hydrate First", "content": "Drink a full glass of water before anything else. You're dehydrated after sleep." },
+        { "title": "Move Your Body", "content": "Even 5 minutes of stretching or walking increases energy and alertness." }
+      ]
+    },
+    {
+      "id": "relationship-communication",
+      "title": "Improve Communication in Relationships",
+      "description": "Connect deeper with the people you love through better communication skills.",
+      "category": "relationships",
+      "readTime": "6 min",
+      "difficulty": "intermediate",
+      "image": "❤️",
+      "featured": false,
+      "sections": [
+        { "title": "Active Listening", "content": "Focus fully when others speak. Don't plan your response while they talk." },
+        { "title": "Use I-Statements", "content": "Say 'I feel...' instead of 'You always...'. This reduces defensiveness." },
+        { "title": "Schedule Check-ins", "content": "Have regular conversations about how the relationship is going." }
+      ]
+    },
+    {
+      "id": "productivity-burnout",
+      "title": "Boost Productivity Without Burnout",
+      "description": "Work smarter, not harder. Sustainable productivity tips for long-term success.",
+      "category": "productivity",
+      "readTime": "7 min",
+      "difficulty": "intermediate",
+      "image": "⚡",
+      "featured": false,
+      "sections": [
+        { "title": "Prioritize Ruthlessly", "content": "Use the Eisenhower Matrix: Urgent/Important, Important/Not Urgent, etc." },
+        { "title": "Take Real Breaks", "content": "Step away from screens. Walk, stretch, or do something completely different." },
+        { "title": "Set Boundaries", "content": "Define work hours and stick to them. Protect your personal time." }
+      ]
+    },
+    {
+      "id": "budget-basics",
+      "title": "Budgeting Basics for Beginners",
+      "description": "Take control of your money with this simple guide to creating and sticking to a budget.",
+      "category": "finance",
+      "readTime": "8 min",
+      "difficulty": "beginner",
+      "image": "💰",
+      "featured": false,
+      "sections": [
+        { "title": "Track Everything", "content": "For one month, write down every expense. You'll be surprised where money goes." },
+        { "title": "50/30/20 Rule", "content": "50% needs, 30% wants, 20% savings. Adjust based on your situation." },
+        { "title": "Automate Savings", "content": "Set up automatic transfers on payday. You can't spend what you don't see." }
+      ]
+    },
+    {
+      "id": "home-workout",
+      "title": "Effective Home Workouts Without Equipment",
+      "description": "Get fit at home with these bodyweight exercises that require zero equipment.",
+      "category": "fitness",
+      "readTime": "6 min",
+      "difficulty": "beginner",
+      "image": "💪",
+      "featured": false,
+      "sections": [
+        { "title": "Warm Up First", "content": "5 minutes of jumping jacks, high knees, and arm circles to prevent injury." },
+        { "title": "Core Exercises", "content": "Planks, crunches, mountain climbers, and leg raises for a strong core." },
+        { "title": "Full Body Circuit", "content": "Push-ups, squats, lunges, burpees. 30 seconds each, 3 rounds." }
+      ]
+    },
+    {
+      "id": "sleep-better",
+      "title": "How to Sleep Better Tonight",
+      "description": "Improve your sleep quality with these science-backed tips and habits.",
+      "category": "health",
+      "readTime": "5 min",
+      "difficulty": "beginner",
+      "image": "😴",
+      "featured": false,
+      "sections": [
+        { "title": "Consistent Schedule", "content": "Go to bed and wake up at the same time daily, even on weekends." },
+        { "title": "Digital Sunset", "content": "Stop screens 1 hour before bed. Blue light disrupts melatonin production." },
+        { "title": "Cool, Dark Room", "content": "Keep bedroom at 65-68°F (18-20°C). Use blackout curtains if needed." }
+      ]
+    },
+    {
+      "id": "manage-stress",
+      "title": "Quick Stress Management Techniques",
+      "description": "Reduce stress in minutes with these simple, effective techniques.",
+      "category": "mental",
+      "readTime": "5 min",
+      "difficulty": "beginner",
+      "image": "🧘",
+      "featured": false,
+      "sections": [
+        { "title": "Box Breathing", "content": "Breathe in 4 seconds, hold 4, out 4, hold 4. Repeat 4 times." },
+        { "title": "Progressive Relaxation", "content": "Tense and release each muscle group from toes to head." },
+        { "title": "Quick Walk", "content": "Even 5 minutes of walking outdoors can significantly reduce stress." }
+      ]
+    },
+    {
+      "id": "networking-tips",
+      "title": "Networking for Introverts",
+      "description": "Build meaningful professional connections without draining your energy.",
+      "category": "career",
+      "readTime": "7 min",
+      "difficulty": "intermediate",
+      "image": "🤝",
+      "featured": false,
+      "sections": [
+        { "title": "Quality Over Quantity", "content": "Focus on building 2-3 deep connections rather than collecting business cards." },
+        { "title": "Prepare Talking Points", "content": "Have 3-4 questions ready. People love talking about themselves." },
+        { "title": "Follow Up Meaningfully", "content": "Send a personalized message within 24 hours referencing your conversation." }
+      ]
+    },
+    {
+      "id": "focus-deep-work",
+      "title": "Master Deep Work and Focus",
+      "description": "Learn to concentrate deeply and produce high-quality work in less time.",
+      "category": "productivity",
+      "readTime": "8 min",
+      "difficulty": "intermediate",
+      "image": "🎯",
+      "featured": false,
+      "sections": [
+        { "title": "Eliminate Distractions", "content": "Turn off notifications, use website blockers, and find a quiet space." },
+        { "title": "Time Block", "content": "Schedule specific hours for deep work. Treat them as non-negotiable." },
+        { "title": "Start Small", "content": "Begin with 30-minute deep work sessions. Gradually increase to 90 minutes." }
+      ]
+    },
+    {
+      "id": "healthy-eating",
+      "title": "Simple Healthy Eating Habits",
+      "description": "Improve your diet without complicated meal plans or restrictions.",
+      "category": "health",
+      "readTime": "6 min",
+      "difficulty": "beginner",
+      "image": "🥗",
+      "featured": false,
+      "sections": [
+        { "title": "Eat More Vegetables", "content": "Fill half your plate with vegetables at every meal. Start there." },
+        { "title": "Drink More Water", "content": "Aim for 8 glasses daily. Often hunger is actually thirst." },
+        { "title": "Cook at Home", "content": "Home-cooked meals are healthier and cheaper. Start with 3 meals per week." }
+      ]
+    },
+    {
+      "id": "confidence-building",
+      "title": "Build Unshakeable Confidence",
+      "description": "Develop genuine self-confidence through practical daily actions.",
+      "category": "mental",
+      "readTime": "7 min",
+      "difficulty": "intermediate",
+      "image": "💪",
+      "featured": false,
+      "sections": [
+        { "title": "Small Wins Daily", "content": "Complete small tasks to build momentum. Success breeds confidence." },
+        { "title": "Power Posing", "content": "Stand tall, shoulders back, hands on hips for 2 minutes before challenges." },
+        { "title": "Positive Self-Talk", "content": "Replace 'I can't' with 'I'm learning to'. Words shape beliefs." }
+      ]
+    },
+    {
+      "id": "time-management",
+      "title": "Time Management for Busy People",
+      "description": "Get more done in less time with these practical time management strategies.",
+      "category": "productivity",
+      "readTime": "6 min",
+      "difficulty": "beginner",
+      "image": "⏰",
+      "featured": false,
+      "sections": [
+        { "title": "Plan Tomorrow Tonight", "content": "Spend 5 minutes each evening planning the next day's priorities." },
+        { "title": "Batch Similar Tasks", "content": "Group similar tasks together. Check email at set times, not constantly." },
+        { "title": "Learn to Say No", "content": "Every yes is a no to something else. Protect your time." }
+      ]
+    },
+    {
+      "id": "exam-preparation",
+      "title": "Ace Your Exams: Complete Guide",
+      "description": "Comprehensive strategies for exam preparation and test-taking success.",
+      "category": "study",
+      "readTime": "10 min",
+      "difficulty": "intermediate",
+      "image": "📝",
+      "featured": false,
+      "sections": [
+        { "title": "Start Early", "content": "Begin studying 2-3 weeks before. Cramming doesn't work for retention." },
+        { "title": "Practice Tests", "content": "Take practice exams under real conditions. This is the best preparation." },
+        { "title": "Exam Day Tips", "content": "Sleep well, eat breakfast, arrive early, read all questions first." }
+      ]
+    },
+    {
+      "id": "conflict-resolution",
+      "title": "Resolve Conflicts Peacefully",
+      "description": "Handle disagreements constructively and maintain healthy relationships.",
+      "category": "relationships",
+      "readTime": "7 min",
+      "difficulty": "intermediate",
+      "image": "🕊️",
+      "featured": false,
+      "sections": [
+        { "title": "Cool Down First", "content": "Take a break if emotions are high. Return when you can think clearly." },
+        { "title": "Seek to Understand", "content": "Ask questions to understand their perspective before defending yours." },
+        { "title": "Find Common Ground", "content": "Focus on shared goals. You're on the same team, not opponents." }
+      ]
+    },
+    {
+      "id": "habit-building",
+      "title": "Build Habits That Stick",
+      "description": "Create lasting positive habits using proven behavioral science techniques.",
+      "category": "productivity",
+      "readTime": "8 min",
+      "difficulty": "intermediate",
+      "image": "🔄",
+      "featured": false,
+      "sections": [
+        { "title": "Start Tiny", "content": "Make the habit so small you can't say no. 1 push-up, not 50." },
+        { "title": "Stack Habits", "content": "Attach new habits to existing ones. 'After I brush teeth, I will...'." },
+        { "title": "Track Progress", "content": "Use a habit tracker. Don't break the chain of consecutive days." }
+      ]
+    },
+    {
+      "id": "public-speaking",
+      "title": "Overcome Fear of Public Speaking",
+      "description": "Speak confidently in front of any audience with these practical tips.",
+      "category": "career",
+      "readTime": "7 min",
+      "difficulty": "intermediate",
+      "image": "🎤",
+      "featured": false,
+      "sections": [
+        { "title": "Prepare Thoroughly", "content": "Know your material inside out. Confidence comes from preparation." },
+        { "title": "Practice Out Loud", "content": "Rehearse your speech multiple times. Record yourself and review." },
+        { "title": "Focus on the Message", "content": "Shift focus from yourself to helping your audience. It's not about you." }
+      ]
+    },
+    {
+      "id": "digital-detox",
+      "title": "Digital Detox: Reclaim Your Time",
+      "description": "Reduce screen time and build a healthier relationship with technology.",
+      "category": "mental",
+      "readTime": "6 min",
+      "difficulty": "beginner",
+      "image": "📵",
+      "featured": false,
+      "sections": [
+        { "title": "Track Your Usage", "content": "Use screen time apps to see where your time goes. Awareness first." },
+        { "title": "Create Phone-Free Zones", "content": "No phones at meals, in bedroom, or first hour after waking." },
+        { "title": "Replace, Don't Remove", "content": "Fill the void with activities you enjoy: reading, walking, hobbies." }
+      ]
+    }
+  ]
+}

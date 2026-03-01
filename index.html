@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All-in-One Life Problem Solver | Solve Any Problem in Minutes</title>
+    <meta name="description" content="Small AI tools, life hacks & quick guides for everything — career, study, relationships, fitness & more. Solve any life problem in minutes.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/homepage.css">
+    <link rel="stylesheet" href="css/notifications.css">
+    <link rel="stylesheet" href="css/footer.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-lightbulb"></i>
+                <span>Life Solver</span>
+            </div>
+            <div class="nav-links">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="pages/category.html" class="nav-link">Categories</a>
+                <a href="pages/collections.html" class="nav-link">Collections</a>
+                <a href="pages/dashboard.html" class="nav-link">Dashboard</a>
+                <a href="pages/about.html" class="nav-link">About</a>
+                <span class="notification-bell" onclick="openNotificationSettings()" title="Notification Settings">🔔</span>
+            </div>
+            <button class="mobile-menu-btn" id="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <!-- Mobile Dropdown Menu -->
+        <div class="mobile-nav-links" style="display: none;">
+            <a href="#home" class="mobile-nav-link active">Home</a>
+            <a href="pages/category.html" class="mobile-nav-link">Categories</a>
+            <a href="pages/collections.html" class="mobile-nav-link">Collections</a>
+            <a href="pages/dashboard.html" class="mobile-nav-link">Dashboard</a>
+            <a href="pages/about.html" class="mobile-nav-link">About</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Solve Any Life Problem in Minutes</h1>
+                <p class="hero-subtitle">Small AI tools, life hacks & quick guides for everything — career, study, relationships, fitness & more.</p>
+                <div class="hero-search">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="What problem can we help you solve today?" id="hero-search-input">
+                </div>
+                <div class="hero-buttons">
+                    <button class="btn-primary" onclick="scrollToSection('tools')">
+                        <span>Try Tools</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                    <button class="btn-secondary" onclick="scrollToSection('guides')">
+                        <span>Explore Guides</span>
+                    </button>
+                </div>
+            </div>
+            <div class="hero-illustration">
+                <div class="illustration-circle"></div>
+                <div class="illustration-icon">✨</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories" id="categories">
+        <div class="container">
+            <h2 class="section-title">Explore by Category</h2>
+            <div class="categories-grid">
+                <div class="category-card" data-category="career">
+                    <div class="category-icon">💼</div>
+                    <h3>Career</h3>
+                    <p>Quick solutions & smart tools</p>
+                </div>
+                <div class="category-card" data-category="relationship">
+                    <div class="category-icon">❤️</div>
+                    <h3>Relationship</h3>
+                    <p>Quick solutions & smart tools</p>
+                </div>
+                <div class="category-card" data-category="study">
+                    <div class="category-icon">📚</div>
+                    <h3>Study</h3>
+                    <p>Quick solutions & smart tools</p>
+                </div>
+                <div class="category-card" data-category="fitness">
+                    <div class="category-icon">💪</div>
+                    <h3>Fitness</h3>
+                    <p>Quick solutions & smart tools</p>
+                </div>
+                <div class="category-card" data-category="productivity">
+                    <div class="category-icon">⚡</div>
+                    <h3>Productivity</h3>
+                    <p>Quick solutions & smart tools</p>
+                </div>
+                <div class="category-card" data-category="mental-wellness">
+                    <div class="category-icon">🧘</div>
+                    <h3>Mental Wellness</h3>
+                    <p>Quick solutions & smart tools</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick AI Tools Section -->
+    <section class="quick-tools" id="quick-tools">
+        <div class="container">
+            <h2 class="section-title">Quick AI Tools</h2>
+            <p class="section-subtitle">Instant solutions for everyday problems</p>
+            <div class="quick-tools-grid">
+                <div class="quick-tool-widget" data-tool="life-advisor">
+                    <div class="widget-icon">🧭</div>
+                    <h3 class="widget-name">Life Advisor</h3>
+                    <p class="widget-desc">Quick life suggestions AI</p>
+                    <button class="widget-btn">Open Tool</button>
+                </div>
+                <div class="quick-tool-widget" data-tool="mood-fixer">
+                    <div class="widget-icon">😊</div>
+                    <h3 class="widget-name">Mood Fixer</h3>
+                    <p class="widget-desc">Motivational quote generator</p>
+                    <button class="widget-btn">Open Tool</button>
+                </div>
+                <div class="quick-tool-widget" data-tool="career-coach">
+                    <div class="widget-icon">💼</div>
+                    <h3 class="widget-name">Mini Career Coach</h3>
+                    <p class="widget-desc">Helps choose a career direction</p>
+                    <button class="widget-btn">Open Tool</button>
+                </div>
+                <div class="quick-tool-widget" data-tool="study-planner">
+                    <div class="widget-icon">📚</div>
+                    <h3 class="widget-name">Study Planner</h3>
+                    <p class="widget-desc">Makes a daily study plan</p>
+                    <button class="widget-btn">Open Tool</button>
+                </div>
+                <div class="quick-tool-widget" data-tool="workout-suggestor">
+                    <div class="widget-icon">💪</div>
+                    <h3 class="widget-name">Workout Suggestor</h3>
+                    <p class="widget-desc">Gives simple home workouts</p>
+                    <button class="widget-btn">Open Tool</button>
+                </div>
+                <div class="quick-tool-widget" data-tool="breakup-friend">
+                    <div class="widget-icon">💙</div>
+                    <h3 class="widget-name">Breakup Friend</h3>
+                    <p class="widget-desc">Friendly coping messages</p>
+                    <button class="widget-btn">Open Tool</button>
+                </div>
+                <div class="quick-tool-widget" data-tool="money-mentor">
+                    <div class="widget-icon">💰</div>
+                    <h3 class="widget-name">Money Mentor</h3>
+                    <p class="widget-desc">Gives simple savings tips</p>
+                    <button class="widget-btn">Open Tool</button>
+                </div>
+                <div class="quick-tool-widget" data-tool="productivity-boost">
+                    <div class="widget-icon">⚡</div>
+                    <h3 class="widget-name">Productivity Boost</h3>
+                    <p class="widget-desc">Gives small tasks to boost focus</p>
+                    <button class="widget-btn">Open Tool</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured AI Tools Section -->
+    <section class="tools" id="tools">
+        <div class="container">
+            <h2 class="section-title">Featured AI Tools</h2>
+            <p class="section-subtitle">Smart solutions powered by AI</p>
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <div class="tool-icon">📝</div>
+                    <h3>Resume Analyzer</h3>
+                    <p>Get instant feedback on your resume</p>
+                    <button class="tool-btn">Open Tool</button>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-icon">😊</div>
+                    <h3>Mood Helper</h3>
+                    <p>Track and improve your daily mood</p>
+                    <button class="tool-btn">Open Tool</button>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-icon">📅</div>
+                    <h3>Study Planner</h3>
+                    <p>Create perfect study schedules</p>
+                    <button class="tool-btn">Open Tool</button>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-icon">🥗</div>
+                    <h3>Diet Generator</h3>
+                    <p>Get personalized meal plans</p>
+                    <button class="tool-btn">Open Tool</button>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-icon">✅</div>
+                    <h3>Habit Maker</h3>
+                    <p>Build lasting positive habits</p>
+                    <button class="tool-btn">Open Tool</button>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-icon">💑</div>
+                    <h3>Relationship Analyzer</h3>
+                    <p>Improve your relationships</p>
+                    <button class="tool-btn">Open Tool</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Guides Section -->
+    <section class="guides" id="guides">
+        <div class="container">
+            <h2 class="section-title">Quick Guides</h2>
+            <p class="section-subtitle">Learn something new in minutes</p>
+            <div class="guides-scroll">
+                <div class="guide-card">
+                    <div class="guide-image">📖</div>
+                    <h3>How to Study Smarter in 20 Minutes</h3>
+                    <p>Proven techniques to boost your learning efficiency</p>
+                </div>
+                <div class="guide-card">
+                    <div class="guide-image">🧠</div>
+                    <h3>How to Fix Overthinking in Daily Life</h3>
+                    <p>Simple strategies to calm your mind</p>
+                </div>
+                <div class="guide-card">
+                    <div class="guide-image">💼</div>
+                    <h3>How to Impress in Interviews</h3>
+                    <p>Stand out and land your dream job</p>
+                </div>
+                <div class="guide-card">
+                    <div class="guide-image">💪</div>
+                    <h3>Build a Morning Routine That Works</h3>
+                    <p>Start your day with energy and focus</p>
+                </div>
+                <div class="guide-card">
+                    <div class="guide-image">❤️</div>
+                    <h3>Improve Communication in Relationships</h3>
+                    <p>Connect deeper with the people you love</p>
+                </div>
+                <div class="guide-card">
+                    <div class="guide-image">⚡</div>
+                    <h3>Boost Productivity Without Burnout</h3>
+                    <p>Work smarter, not harder</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">What People Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-avatar">👨</div>
+                    <p class="testimonial-text">"The study planner changed my grades completely!"</p>
+                    <p class="testimonial-name">Alex M.</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-avatar">👩</div>
+                    <p class="testimonial-text">"Finally found quick solutions that actually work."</p>
+                    <p class="testimonial-name">Sarah K.</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-avatar">👨‍💼</div>
+                    <p class="testimonial-text">"The career tools helped me land my dream job!"</p>
+                    <p class="testimonial-name">David L.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="ls-footer">
+        <div class="ls-container">
+            <!-- Main Footer Content -->
+            <div class="ls-footer-content">
+                
+                <!-- Brand Section -->
+                <div class="ls-footer-brand">
+                    <a href="index.html" class="ls-footer-logo">
+                        <span class="ls-footer-logo-icon">💡</span>
+                        <span>Life Solver</span>
+                    </a>
+                    <p class="ls-footer-tagline">
+                        Solve any life problem in minutes with simple AI tools, guides, and hacks.
+                    </p>
+                    
+                    <!-- Optional Newsletter -->
+                    <div class="ls-footer-newsletter">
+                        <h4>Stay Updated</h4>
+                        <form class="ls-footer-newsletter-form">
+                            <input type="email" placeholder="Your email" required>
+                            <button type="submit">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+                
+                <!-- Navigation Links -->
+                <div class="ls-footer-section">
+                    <h3>Navigation</h3>
+                    <ul class="ls-footer-links">
+                        <li><a href="index.html">🏠 Home</a></li>
+                        <li><a href="pages/ai-tools.html">🔧 All Tools</a></li>
+                        <li><a href="pages/guides.html">📚 Guides Library</a></li>
+                        <li><a href="pages/life-hacks.html">💡 Life Hacks</a></li>
+                        <li><a href="pages/collections.html">🎁 Collections</a></li>
+                        <li><a href="pages/dashboard.html">📊 Dashboard</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Support Links -->
+                <div class="ls-footer-section">
+                    <h3>Support</h3>
+                    <ul class="ls-footer-links">
+                        <li><a href="pages/about.html">ℹ️ About</a></li>
+                        <li><a href="pages/contact.html">✉️ Contact</a></li>
+                        <li><a href="pages/privacy.html">🔒 Privacy Policy</a></li>
+                        <li><a href="pages/terms.html">📄 Terms of Service</a></li>
+                        <li><a href="pages/faq.html">❓ FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Social Links -->
+                <div class="ls-footer-section ls-footer-social">
+                    <h3>Connect</h3>
+                    <div class="ls-social-icons">
+                        <a href="https://instagram.com" target="_blank" rel="noopener" class="ls-social-link instagram" aria-label="Instagram">
+                            📷
+                        </a>
+                        <a href="https://youtube.com" target="_blank" rel="noopener" class="ls-social-link youtube" aria-label="YouTube">
+                            ▶️
+                        </a>
+                        <a href="https://t.me" target="_blank" rel="noopener" class="ls-social-link telegram" aria-label="Telegram">
+                            ✈️
+                        </a>
+                        <a href="mailto:hello@lifesolver.com" class="ls-social-link email" aria-label="Email">
+                            ✉️
+                        </a>
+                    </div>
+                    <p class="ls-footer-tagline" style="margin-top: 1rem;">
+                        Join our community and get daily tips, new tools, and life hacks.
+                    </p>
+                </div>
+                
+            </div>
+            
+            <!-- Footer Bottom -->
+            <div class="ls-footer-bottom">
+                <p class="ls-footer-copyright">
+                    © 2024 <strong>Life Solver</strong> — Made with purpose, not pressure.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/homepage.js"></script>
+    <script src="js/notifications.js"></script>
+</body>
+</html>
