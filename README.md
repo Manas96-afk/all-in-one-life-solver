@@ -445,3 +445,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 **Made with ❤️ by the Life Solver Team**
 
 *Empowering people to solve life's problems, one tool at a time.*
+#   a l l - i n - o n e - l i f e - s o l v e r  
+ 
